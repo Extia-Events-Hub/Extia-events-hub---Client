@@ -9,7 +9,7 @@ function SelectLanguage({ className }) {
     const [t, i18] = useTranslation("global")
 
     return (
-        <div className={'w-full shadow-custom flex justify-center items-center rounded-full backdrop-filter backdrop-blur-sm relative hover:bg-white ' + className}>
+        <div className={'w-full shadow-custom flex justify-center items-center rounded-full backdrop-filter backdrop-blur-sm relative backdrop-blur-md bg-white bg-opacity-60 hover:bg-white ' + className}>
 
 
             <span className="font-bold w-full h-full flex justify-center items-center cursor-pointer select-none gap-4 " onClick={() => setOpenLenguages(!openLenguages)}>
