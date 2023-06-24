@@ -6,6 +6,7 @@ import Register from '../views/auth/Register'
 import NotFound from '../components/ui/commons/NotFound'
 import AuthContext from '../context/AuthContext'
 import Events from '../views/events/Events'
+import SingleEvent from '../views/singleEvent/SingleEvent'
 
 export function Router() {
 
@@ -31,6 +32,7 @@ export function Router() {
                     <Route path='/' element={<Home />} />
                     <Route path='/home' element={<Home />} />
                     <Route path='/events' element={<Events />} />
+                    <Route path='/events/:id' element={<SingleEvent />} />
 
                     <Route path='*' element={<NotFound />} />
                 </Routes>
