@@ -7,11 +7,21 @@
   "navbar": {
     "language": "Idioma"
   },
+
   "home": {
     "titleEventsHub": "Extia Events Hub",
     "descriptionEventsHub": "",
     "events": "Eventos",
     "moreEvents": "Más eventos",
     "collaborators": "Colaboladores"
+  },
+
+  "events": {
+    "searchEvent": "Buscar evento",
+    "filterBy": "Filtrar por",
+    "recently": "Recientes",
+    "nextWeek": "Siguiente semana",
+    "online": "En linea",
+    "presential": "Presencial"
   }
 }

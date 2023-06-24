@@ -12,7 +12,16 @@
     "titleEventsHub": "Extia Events Hub",
     "descriptionEventsHub": "",
     "events": "Events",
-    "moreEvents": "More events",
+    "moreEvents": "More Events",
     "collaborators": "Collaborators"
+  },
+
+  "events": {
+    "searchEvent": "Search Event",
+    "filterBy": "Filter by",
+    "recently": "Recently",
+    "nextWeek": "Next Week",
+    "online": "Online",
+    "presential": "In Person"
   }
 }
