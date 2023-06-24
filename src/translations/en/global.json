@@ -1,0 +1,27 @@
+{
+  "eventCard": {
+    "online": "Online",
+    "date": "Date"
+  },
+
+  "navbar": {
+    "language": "Language"
+  },
+
+  "home": {
+    "titleEventsHub": "Extia Events Hub",
+    "descriptionEventsHub": "",
+    "events": "Events",
+    "moreEvents": "More Events",
+    "collaborators": "Collaborators"
+  },
+
+  "events": {
+    "searchEvent": "Search Event",
+    "filterBy": "Filter by",
+    "recently": "Recently",
+    "nextWeek": "Next Week",
+    "online": "Online",
+    "presential": "In Person"
+  }
+}
