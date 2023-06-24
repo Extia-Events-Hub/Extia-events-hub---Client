@@ -1,0 +1,171 @@
+[
+    {
+      "title": {
+        "es": "Taller de Reciclaje",
+        "en": "Recycling Workshop",
+        "fr": "Atelier de recyclage"
+      },
+      "shortDescription": {
+        "es": "Aprende cómo reciclar correctamente y contribuye al cuidado del medio ambiente.",
+        "en": "Learn how to recycle properly and contribute to environmental conservation.",
+        "fr": "Apprenez comment recycler correctement et contribuez à la préservation de l'environnement."
+      },
+      "longDescription": {
+        "es": "En este taller práctico, te enseñaremos técnicas de reciclaje y te daremos consejos sobre cómo reducir tu impacto ambiental. ¡Ven y únete a nosotros!",
+        "en": "In this hands-on workshop, we will teach you recycling techniques and give you tips on how to reduce your environmental footprint. Come and join us!",
+        "fr": "Lors de cet atelier pratique, nous vous apprendrons des techniques de recyclage et vous donnerons des conseils sur la réduction de votre empreinte environnementale. Venez nous rejoindre !"
+      },
+      "mode": {
+        "es": {"isPresential":true, "location": "asdsad"},
+        "en": {"isPresential": true, "location": "asdsad"},
+        "fr": {"isPresential": true, "location": "asdsad"}
+      },
+      "startDate": "2023-07-10",
+      "startTime": "09:00",
+      "endDate": "2023-07-10",
+      "endTime": "12:00",
+      "user_id": 1,
+      "image": "https://ejemplo.com/imagen-taller-reciclaje.jpg"
+    },
+    {
+      "title": {
+        "es": "Charla sobre Energías Renovables",
+        "en": "Talk on Renewable Energy",
+        "fr": "Conférence sur les énergies renouvelables"
+      },
+      "shortDescription": {
+        "es": "Descubre cómo las energías renovables pueden transformar nuestro futuro en esta interesante charla.",
+        "en": "Discover how renewable energies can transform our future in this engaging talk.",
+        "fr": "Découvrez comment les énergies renouvelables peuvent transformer notre avenir lors de cette conférence captivante."
+      },
+      "longDescription": {
+        "es": "En esta charla, expertos en energías renovables compartirán los últimos avances tecnológicos y discutirán sobre su impacto en la transición hacia una sociedad más sostenible. Aprende sobre la energía solar, eólica, hidroeléctrica y mucho más. ¡No te lo pierdas!",
+        "en": "In this talk, renewable energy experts will share the latest technological advancements and discuss their impact on the transition to a more sustainable society. Learn about solar, wind, hydroelectric power, and much more. Don't miss out!",
+        "fr": "Lors de cette conférence, des experts en énergies renouvelables partageront les dernières avancées technologiques et discuteront de leur impact sur la transition vers une société plus durable. Apprenez-en plus sur l'énergie solaire, éolienne, hydroélectrique et bien plus encore. Ne manquez pas ça !"
+      },
+      "mode": {
+        "es": {"isPresential":false, "location": "asdsadsa"},
+        "en": {"isPresential": false, "location": "asdsadsa"},
+        "fr": {"isPresential": false, "location": "asdsadsa"}
+      },
+      "startDate": "2023-08-05",
+      "startTime": "14:00",
+      "endDate": "2023-08-05",
+      "endTime": "16:30",
+      "user_id": 2,
+      "image": "https://ejemplo.com/imagen-charla-energias-renovables.jpg"
+    },
+    {
+      "title": {
+        "es": "Feria de Productos Sostenibles",
+        "en": "Sustainable Products Fair",
+        "fr": "Salon des produits durables"
+      },
+      "shortDescription": {
+        "es": "En esta feria encontrarás productos ecológicos, orgánicos, reciclados y de comercio justo. ¡Haz tus compras de manera consciente!",
+        "en": "At this fair, you will find eco-friendly, organic, recycled, and fair trade products. Shop consciously!",
+        "fr": "Lors de ce salon, vous trouverez des produits écologiques, biologiques, recyclés et issus du commerce équitable. Faites vos achats de manière consciente !"
+      },
+      "longDescription": {
+        "es": "Esta feria reúne a productores comprometidos con la sostenibilidad y ofrece una amplia variedad de productos respetuosos con el medio ambiente. Conoce a los productores y descubre las prácticas sostenibles detrás de cada producto. ¡Haz tus compras de manera consciente!",
+        "en": "This fair brings together producers committed to sustainability and offers a wide variety of environmentally-friendly products. Meet the producers and learn about the sustainable practices behind each product. Shop consciously!",
+        "fr": "Ce salon rassemble des producteurs engagés en faveur de la durabilité et propose une grande variété de produits respectueux de l'environnement. Rencontrez les producteurs et découvrez les pratiques durables derrière chaque produit. Faites vos achats de manière consciente !"
+      },
+      "mode": {
+        "es": {"isPresential": true, "location": "Centro de Convenciones"},
+        "en": {"isPresential": true, "location": "Convention Center"},
+        "fr": {"isPresential": true, "location": "Centre de congrès"}
+      },
+      "startDate": "2023-09-22",
+      "startTime": "10:00",
+      "endDate": "2023-09-24",
+      "endTime": "18:00",
+      "user_id": 4,
+      "image": "https://ejemplo.com/imagen-feria-productos-sostenibles.jpg"
+    },
+    {
+      "title": {
+        "es": "Concurso de Arte Reciclado",
+        "en": "Recycled Art Contest",
+        "fr": "Concours d'art recyclé"
+      },
+      "shortDescription": {
+        "es": "Participa en nuestro concurso de arte reciclado y demuestra tu creatividad utilizando materiales reutilizados.",
+        "en": "Take part in our recycled art contest and showcase your creativity using reused materials.",
+        "fr": "Participez à notre concours d'art recyclé et mettez en valeur votre créativité en utilisant des matériaux réutilisés."
+      },
+      "longDescription": {
+        "es": "Este concurso desafía a los participantes a crear obras de arte utilizando materiales reciclados. Demuestra tu habilidad artística y tu compromiso con la sostenibilidad. ¡Las mejores creaciones serán premiadas!",
+        "en": "This contest challenges participants to create artworks using recycled materials. Showcase your artistic skills and commitment to sustainability. The best creations will be awarded!",
+        "fr": "Ce concours met au défi les participants de créer des œuvres d'art à partir de matériaux recyclés. Mettez en valeur vos compétences artistiques et votre engagement envers la durabilité. Les meilleures créations seront récompensées !"
+      },
+      "mode": {
+        "es": {"isPresential":false, "location": ""},
+        "en": {"isPresential": false, "location": ""},
+        "fr": {"isPresential": false, "location": ""}
+      },
+      "startDate": "2023-10-15",
+      "startTime": "13:00",
+      "endDate": "2023-10-15",
+      "endTime": "17:00",
+      "user_id": 3,
+      "image": "https://ejemplo.com/imagen-concurso-arte-reciclado.jpg"
+    },
+    {
+      "title": {
+        "es": "Exposición de Arquitectura Sostenible",
+        "en": "Sustainable Architecture Exhibition",
+        "fr": "Exposition d'architecture durable"
+      },
+      "shortDescription": {
+        "es": "Descubre las últimas tendencias en arquitectura sostenible y cómo esta puede contribuir a un futuro más verde.",
+        "en": "Discover the latest trends in sustainable architecture and how it can contribute to a greener future.",
+        "fr": "Découvrez les dernières tendances en matière d'architecture durable et comment elle peut contribuer à un avenir plus vert."
+      },
+      "longDescription": {
+        "es": "En esta exposición, podrás explorar proyectos arquitectónicos sostenibles que incorporan tecnologías y materiales respetuosos con el medio ambiente. Conoce cómo la arquitectura puede ser parte de la solución para los desafíos ambientales actuales. ¡No te lo pierdas!",
+        "en": "In this exhibition, you can explore sustainable architectural projects that incorporate environmentally-friendly technologies and materials. Learn how architecture can be part of the solution to current environmental challenges. Don't miss out!",
+        "fr": "Lors de cette exposition, vous pourrez découvrir des projets d'architecture durables qui intègrent des technologies et des matériaux respectueux de l'environnement. Découvrez comment l'architecture peut faire partie de la solution aux défis environnementaux actuels. Ne manquez pas ça !"
+      },
+      "mode": {
+        "es": {"isPresential": true, "location": "Galería de Arte"},
+        "en": {"isPresential": true, "location": "Art Gallery"},
+        "fr": {"isPresential": true, "location": "Galerie d'art"}
+      },
+      "startDate": "2023-11-05",
+      "startTime": "10:00",
+      "endDate": "2023-11-10",
+      "endTime": "16:00",
+      "user_id": 5,
+      "image": "https://ejemplo.com/imagen-exposicion-arquitectura-sostenible.jpg"
+    },
+    {
+      "title": {
+        "es": "Webinar sobre Agricultura Urbana",
+        "en": "Webinar on Urban Agriculture",
+        "fr": "Webinaire sur l'agriculture urbaine"
+      },
+      "shortDescription": {
+        "es": "Aprende cómo cultivar tus propios alimentos en entornos urbanos y contribuye a la seguridad alimentaria.",
+        "en": "Learn how to grow your own food in urban environments and contribute to food security.",
+        "fr": "Apprenez à cultiver votre propre nourriture dans les environnements urbains et contribuez à la sécurité alimentaire."
+      },
+      "longDescription": {
+        "es": "En este webinar, expertos en agricultura urbana compartirán técnicas y consejos prácticos para cultivar vegetales y frutas en espacios reducidos. Descubre cómo puedes tener un huerto urbano y disfrutar de alimentos frescos y saludables.",
+        "en": "In this webinar, urban agriculture experts will share techniques and practical tips for growing vegetables and fruits in small spaces. Discover how you can have an urban garden and enjoy fresh and healthy food.",
+        "fr": "Lors de ce webinaire, des experts en agriculture urbaine partageront des techniques et des astuces pratiques pour cultiver des légumes et des fruits dans de petits espaces. Découvrez comment vous pouvez avoir un jardin urbain et profiter d'aliments frais et sains."
+      },
+      "mode": {
+        "es": {"isPresential":false, "location": ""},
+        "en": {"isPresential": false, "location": ""},
+        "fr": {"isPresential": false, "location": ""}
+      },
+      "startDate": "2023-12-01",
+      "startTime": "18:30",
+      "endDate": "2023-12-01",
+      "endTime": "20:00",
+      "user_id": 6,
+      "image": "https://ejemplo.com/imagen-webinar-agricultura-urbana.jpg"
+    }
+  ]
+  

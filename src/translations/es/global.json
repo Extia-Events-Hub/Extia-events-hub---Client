@@ -1,0 +1,17 @@
+{
+  "eventCard": {
+    "online": "En linea",
+    "date": "Fecha"
+  },
+
+  "navbar": {
+    "language": "Idioma"
+  },
+  "home": {
+    "titleEventsHub": "Extia Events Hub",
+    "descriptionEventsHub": "",
+    "events": "Eventos",
+    "moreEvents": "Más eventos",
+    "collaborators": "Colaboladores"
+  }
+}
