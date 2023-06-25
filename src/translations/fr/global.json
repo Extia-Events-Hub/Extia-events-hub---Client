@@ -23,5 +23,20 @@
     "nextWeek": "Semaine prochaine",
     "online": "En ligne",
     "presential": "En personne"
-  }
+  },
+
+  "admin": {
+    "viewEstatistics": "Voir les statistiques de l'événement ou",
+    "createNewEvent": "créer un nouvel événement",
+    "searchEvent": "Rechercher un événement",
+    "eventsList": "Liste des événements",
+    "orderBy": "Trier par",
+    "mostRecent": "Plus récents",
+    "past": "Passés",
+    "online": "En ligne",
+    "presential": "Présentiel",
+    "viewEventsDetails": "Voir les détails de l'événement",
+    "participants": "Participants",
+    "viewEvent":"Voir l'événement"
+  }  
 }
