@@ -110,7 +110,7 @@ function Navbar({ className }) {
           isScrolled ? "bg-white bg-opacity-100 shadow-custom" : ""
         }`}
       >
-        <Link className="z-40">
+        <Link to="/home" className="z-40">
           <img src={logo} alt="Logo" className="w-12 h-12" />
         </Link>
         <label className=" swap swap-rotate">
