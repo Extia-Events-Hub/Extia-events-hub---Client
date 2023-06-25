@@ -11,7 +11,7 @@ function SelectLanguage({ className }) {
   return (
     <div
       className={
-        "w-full shadow-custom flex justify-center items-center rounded-full backdrop-filter backdrop-blur-sm relative backdrop-blur-md bg-white bg-opacity-60 hover:bg-white " +
+        "w-full shadow-custom flex justify-center items-center rounded-full backdrop-filter relative backdrop-blur-md bg-white bg-opacity-60 hover:bg-white " +
         className
       }
     >
