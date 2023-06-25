@@ -38,5 +38,15 @@
     "viewEventsDetails":"View events details",
     "participants":"Participants",
     "viewEvent":"View event"
+  },
+
+  "singleEvent":{
+    "whereAndWhen":"Where and when",
+    "aboutTheEvent":"About the event",
+    "register":"Register",
+    "name":"Name",
+    "email":"Email",
+    "getMyTicket":"Get my ticket now"
   }
+
 }
