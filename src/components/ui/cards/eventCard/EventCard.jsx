@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import AuthContext from "../../../../context/AuthContext";
 import Button from "../../commons/Button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export function EventCard({ event }) {
   const { t } = useTranslation("global");
@@ -32,7 +33,9 @@ export function EventCard({ event }) {
           {t("eventCard.date")}:{event && date}
         </h2>
         <h2 className=" text-neutral-400 ">{event && locationEvent}</h2>
-        <Button className=" self-end">View Event</Button>
+        <Link className=" self-end" target="_blank" to={'/events/' + event?.id}>
+          <Button>View Event</Button>
+        </Link>
       </div>
     </article>
   );
