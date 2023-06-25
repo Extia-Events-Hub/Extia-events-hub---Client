@@ -26,7 +26,7 @@
       "endDate": "2023-07-10",
       "endTime": "12:00",
       "user_id": 1,
-      "image": "https://ejemplo.com/imagen-taller-reciclaje.jpg"
+      "image": "https://cdn.pixabay.com/photo/2022/11/16/09/29/bottle-7595561_640.jpg"
     },
     {
       "id":1,
@@ -55,7 +55,7 @@
       "endDate": "2023-08-05",
       "endTime": "16:30",
       "user_id": 2,
-      "image": "https://ejemplo.com/imagen-charla-energias-renovables.jpg"
+      "image": "https://cdn.pixabay.com/photo/2017/01/18/10/17/renewable-1989416_640.jpg"
     },
     {
       "id":2,
@@ -84,7 +84,7 @@
       "endDate": "2023-09-24",
       "endTime": "18:00",
       "user_id": 4,
-      "image": "https://ejemplo.com/imagen-feria-productos-sostenibles.jpg"
+      "image": "https://images.pexels.com/photos/6634652/pexels-photo-6634652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id":3,
@@ -113,7 +113,7 @@
       "endDate": "2023-10-15",
       "endTime": "17:00",
       "user_id": 3,
-      "image": "https://ejemplo.com/imagen-concurso-arte-reciclado.jpg"
+      "image": "https://images.pexels.com/photos/3021116/pexels-photo-3021116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id":4,
@@ -142,7 +142,7 @@
       "endDate": "2023-11-10",
       "endTime": "16:00",
       "user_id": 5,
-      "image": "https://ejemplo.com/imagen-exposicion-arquitectura-sostenible.jpg"
+      "image": "https://images.pexels.com/photos/17046790/pexels-photo-17046790/free-photo-of-hombre-manos-escritorio-trabajando.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id":5,
@@ -171,7 +171,7 @@
       "endDate": "2023-12-01",
       "endTime": "20:00",
       "user_id": 6,
-      "image": "https://ejemplo.com/imagen-webinar-agricultura-urbana.jpg"
+      "image": "https://images.pexels.com/photos/5644292/pexels-photo-5644292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]
   

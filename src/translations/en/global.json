@@ -1,6 +1,6 @@
 {
   "eventCard": {
-    "online": "Online",
+    "online": "Online event",
     "date": "Date"
   },
 
@@ -33,7 +33,7 @@
     "orderBy": "Order by",
     "mostRecent":"Most recent",
     "past":"Past",
-    "online":"Online",
+    "online":"Online event",
     "presential":"Presential",
     "viewEventsDetails":"View events details",
     "participants":"Participants",
