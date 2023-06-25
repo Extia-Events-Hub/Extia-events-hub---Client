@@ -1,13 +1,11 @@
-import Navbar from './components/ui/navbar/Navbar';
-import { AxiosInterceptor } from './interceptors/axios.interceptor';
-import { Router } from './router/Router'
+import React from "react";
+import { AxiosInterceptor } from "./interceptors/axios.interceptor";
+import { Router } from "./router/Router";
 
 function App() {
   AxiosInterceptor();
 
-  return (
-    <Router />
-  )
+  return <Router />;
 }
 
-export default App
+export default App;

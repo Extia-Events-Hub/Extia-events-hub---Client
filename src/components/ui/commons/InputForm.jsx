@@ -1,8 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const InputForm = ({ label, name, register, type, placeholder, minLength, maxLength, pattern, errorMessage }) => {
-
-
+const InputForm = ({
+  label,
+  name,
+  register,
+  type,
+  placeholder,
+  minLength,
+  maxLength,
+  pattern,
+  errorMessage,
+}) => {
   return (
     <div className="form-control">
       <label className="label font-bold font-mulish ">
