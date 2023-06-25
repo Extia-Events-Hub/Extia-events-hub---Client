@@ -23,5 +23,30 @@
     "nextWeek": "Siguiente semana",
     "online": "En linea",
     "presential": "Presencial"
-  }
+  },
+
+  "admin": {
+    "viewEstatistics": "Ver estadísticas del evento o",
+    "createNewEvent": "crear nuevo evento",
+    "searchEvent": "Buscar evento",
+    "eventsList": "Lista de eventos",
+    "orderBy": "Ordenar por",
+    "mostRecent": "Más recientes",
+    "past": "Pasados",
+    "online": "En línea",
+    "presential": "Presencial",
+    "viewEventsDetails": "Ver detalles del evento",
+    "participants": "Participantes",
+    "viewEvent":"Ver evento"
+  },
+
+  "singleEvent": {
+    "whereAndWhen": "Lugar y fecha",
+    "aboutTheEvent": "Sobre el evento",
+    "register": "Registrarse",
+    "name": "Nombre",
+    "email": "Email",
+    "getMyTicket": "Obtener mi entrada ahora"
+  }  
+  
 }
