@@ -9,6 +9,7 @@ import Events from "../views/events/Events";
 import SingleEvent from "../views/singleEvent/SingleEvent";
 import AdminView from "../views/admin/AdminView";
 import CreateEvent from "../views/admin/CreateEvent";
+import ScrollToTop from "../components/scrollTop/ScrollTop";
 
 export function Router() {
   const { token } = useContext(AuthContext);
@@ -24,6 +25,7 @@ export function Router() {
   };
   return (
     <HashRouter>
+      <ScrollToTop/>
       <div className="text-text-color bg-base">
         <Routes>
           <Route path="/login" element={<Login />} />
