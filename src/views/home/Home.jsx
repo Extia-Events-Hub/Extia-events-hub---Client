@@ -25,7 +25,7 @@ function Home() {
               return <EventCard key={index} event={event} />;
             })}
           </div>
-          <span className="w-full flex justify-center pt-8">
+          <span className="w-full flex justify-center pt-16">
             <Link
               className="font-mulish text-2xl text-primary underline underline-offset-4 animate-bounce flex gap-4"
               to="/events"
@@ -35,15 +35,17 @@ function Home() {
           </span>
         </HomeSection>
 
-        <HomeSection className={"pt-16 md:pt-24"} title={t("home.collaborators")}>
+        <HomeSection className={"pt-12 md:pt-24"} title={t("home.collaborators")}>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             {eventsData?.map((event, index) => {
               return (
                 <div
                   key={index}
+                  data-aos="fade-up"
+                  data-aos-duration="1000"  
                   className="shadow-custom rounded-2xl p-4 flex justify-center items-center"
                 >
-                  *Colaborador*
+                  <h2 className="title3 opacity-30">BRAND</h2>
                 </div>
               );
             })}
