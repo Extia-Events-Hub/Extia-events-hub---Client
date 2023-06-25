@@ -4,10 +4,13 @@ import Navbar from '../../components/ui/navbar/Navbar';
 import Footer from '../../components/ui/footer/Footer';
 import { HiCalendarDays } from 'react-icons/hi2';
 import Button from '../../components/ui/commons/Button';
+import { useTranslation } from 'react-i18next';
 
 function SingleEvent() {
 
   const { id } = useParams();
+
+  const {t} = useTranslation("global")
 
 
   return (
@@ -24,7 +27,7 @@ function SingleEvent() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis impedit, vero qui minima excepturi earum laudantium numquam animi culpa aliquid unde enim ea eaque eum ducimus maxime nam suscipit. Laborum?</p>
             <span className='divider'></span>
 
-            <h2 className='title2'>When and where </h2>
+            <h2 className='title2'>{t("singleEvent.whereAndWhen")} </h2>
             <div className="w-full rounded-2xl shadow-custom flex p-4 justify-between">
               <div className="w-1/2 flex flex-col items-center">
                 <HiCalendarDays className='w-16 h-16 md:w-20 md:h-20 aspect-square' />
@@ -39,7 +42,7 @@ function SingleEvent() {
 
             <span className="divider"></span>
 
-            <h2 className='title2'>About event</h2>
+            <h2 className='title2'>{t("singleEvent.aboutTheEvent")}</h2>
             <div className="flex flex-col gap-4 font-roboto">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, non harum rerum laborum tempore aliquid dolor ex, voluptates suscipit, voluptatibus id unde perspiciatis possimus ut amet? Eligendi fuga ducimus repudiandae?</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti architecto fugiat minima. Aspernatur sequi laborum laboriosam rerum quibusdam nostrum ipsa, nisi ipsum delectus dignissimos veritatis consectetur temporibus ducimus obcaecati quis.</p>
@@ -49,14 +52,14 @@ function SingleEvent() {
           </div>
           <div className=" w-full hidden md:block md:w-1/2  min-h-screen ">
             <form className="sticky top-[12vh] p-4 rounded-2xl shadow-custom flex flex-col gap-4 bg-white ">
-              <h2 className='title3 font-semibold font-mulish'>Register</h2>
-              <label className='bold flex flex-col'>Nombre
-                <input required type="text" className='input input-bordered' placeholder='Name' />
+              <h2 className='title3 font-semibold font-mulish'>{t("singleEvent.register")}</h2>
+              <label className='bold flex flex-col'>{t("singleEvent.name")}
+                <input required type="text" className='input input-bordered' placeholder={t("singleEvent.name")} />
               </label>
-              <label className='bold flex flex-col'>Email
-                <input required type="text" className='input input-bordered' placeholder='Email' />
+              <label className='bold flex flex-col'>{t("singleEvent.email")}
+                <input required type="text" className='input input-bordered' placeholder={t("singleEvent.email")} />
               </label>
-              <Button>Inscribirse</Button>
+              <Button>{t("singleEvent.getMyTicket")}</Button>
             </form>
           </div>
         </div>
@@ -67,16 +70,16 @@ function SingleEvent() {
         <div className="collapse">
           <input type="checkbox" className="peer" />
           <div className="collapse-title ">
-            <h2 className='title2 font-mulish'>Register</h2>
+            <h2 className='title2 font-mulish'>{t("singleEvent.register")}</h2>
           </div>
           <form className="collapse-content flex flex-col gap-4 bg-white ">
-            <label className='bold flex flex-col'>Nombre
-              <input required type="text" className='input input-bordered' placeholder='Name' />
+            <label className='bold flex flex-col'>{t("singleEvent.name")}
+              <input required type="text" className='input input-bordered' placeholder={t("singleEvent.name")} />
             </label>
-            <label className='bold flex flex-col'>Email
-              <input required type="text" className='input input-bordered' placeholder='Email' />
+            <label className='bold flex flex-col'>{t("singleEvent.email")}
+              <input required type="text" className='input input-bordered' placeholder={t("singleEvent.email")}/>
             </label>
-            <Button>Inscribirse</Button>
+            <Button>{t("singleEvent.getMyTicket")}</Button>
           </form>
         </div>
       </div>
