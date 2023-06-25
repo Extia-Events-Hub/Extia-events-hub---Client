@@ -6,7 +6,7 @@ import { HiOutlineChevronDown } from "react-icons/hi2";
 function SelectLanguage({ className }) {
   const [openLenguages, setOpenLenguages] = useState(false);
   const { lenguage, setLenguage } = useContext(AuthContext);
-  const [i18] = useTranslation("global");
+  const [t,i18] = useTranslation("global");
 
   return (
     <div
