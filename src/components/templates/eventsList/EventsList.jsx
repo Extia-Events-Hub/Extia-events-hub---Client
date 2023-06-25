@@ -7,7 +7,7 @@ import {
 import Button from "../../ui/commons/Button";
 import AuthContext from "../../../context/AuthContext";
 
-function EventsList({className, eventsList, setEventSelected }) {
+function EventsList({ className, eventsList, setEventSelected }) {
   const { t } = useTranslation("global");
   const [openFilters, setOpenFilters] = useState(false);
   const { lenguage } = useContext(AuthContext);
@@ -20,14 +20,15 @@ function EventsList({className, eventsList, setEventSelected }) {
 
   const filteredEvents = eventsList.filter((event) => {
     const title = event.title[lenguage.toLowerCase()].toLowerCase();
-    const description = event.shortDescription[lenguage.toLowerCase()].toLowerCase();
+    const description =
+      event.shortDescription[lenguage.toLowerCase()].toLowerCase();
 
     return title.includes(searchTerm) || description.includes(searchTerm);
   });
 
   useEffect(() => {
     setFilterSelected(t("events.recently"));
-    console.log(eventsList)
+    console.log(eventsList);
   }, [t]);
 
   return (
@@ -116,7 +117,9 @@ function EventsList({className, eventsList, setEventSelected }) {
               return (
                 <li className="w-full flex flex-col md:flex-row gap-4 p-4 hover:bg-gray-100 cursor-pointer md:items-center justify-between">
                   <span className="flex flex-col">
-                    <h3 className="text-lg font-bold">{event.title[lenguage.toLowerCase()]}</h3>
+                    <h3 className="text-lg font-bold">
+                      {event.title[lenguage.toLowerCase()]}
+                    </h3>
                     <p>{event.shortDescription[lenguage.toLowerCase()]}</p>
                   </span>
                   <Button onClick={() => setEventSelected(event)}>

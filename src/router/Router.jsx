@@ -25,7 +25,7 @@ export function Router() {
   };
   return (
     <HashRouter>
-      <ScrollToTop/>
+      <ScrollToTop />
       <div className="text-text-color bg-base">
         <Routes>
           <Route path="/login" element={<Login />} />

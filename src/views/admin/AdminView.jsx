@@ -31,7 +31,10 @@ function AdminView() {
             setEventSelected={setEventSelected}
             className={"md:h-[65vh]  md:w-1/2"}
           />
-          <EventPreview className={"md:h-[65vh]  md:w-1/2"} eventSelected={eventSelected} />
+          <EventPreview
+            className={"md:h-[65vh]  md:w-1/2"}
+            eventSelected={eventSelected}
+          />
         </div>
       </div>
     </>

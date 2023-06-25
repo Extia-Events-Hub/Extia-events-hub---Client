@@ -18,8 +18,8 @@ function EventPreview({ className, eventSelected }) {
     mode: eventSelected?.mode[lenguage.toLowerCase()],
     startDate: eventSelected?.startDate,
     endDate: eventSelected?.endDate,
-    startTime:eventSelected?.startTime,
-    endTime:eventSelected?.endTime,
+    startTime: eventSelected?.startTime,
+    endTime: eventSelected?.endTime,
     image: eventSelected?.image,
   };
 
@@ -41,9 +41,14 @@ function EventPreview({ className, eventSelected }) {
             <p className="font-roboto ">{eventTraduced?.shortDescription}</p>
             <p className="font-roboto ">{eventTraduced?.longDescription}</p>
             <p>
-              {eventTraduced?.startDate} -- {eventTraduced?.startTime} - {eventTraduced?.endTime}
+              {eventTraduced?.startDate} -- {eventTraduced?.startTime} -{" "}
+              {eventTraduced?.endTime}
             </p>
-            <h4 className="font-bold">{eventTraduced?.mode.location? eventTraduced?.mode.location : t("eventCard.online")}</h4>
+            <h4 className="font-bold">
+              {eventTraduced?.mode.location
+                ? eventTraduced?.mode.location
+                : t("eventCard.online")}
+            </h4>
           </div>
           <h2 className="title3 mt-4">{t("admin.participants")}</h2>
           <span className="divider"></span>

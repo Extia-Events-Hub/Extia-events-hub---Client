@@ -10,7 +10,11 @@ function HomeSection({ children, className, title }) {
       >
         {title}
       </span>
-      <h2 className="title1 animated-element translate-x-[-80px] transition-transform duration-500 ease-in-out" data-aos="fade-rigth" data-aos-duration="1000">
+      <h2
+        className="title1 animated-element translate-x-[-80px] transition-transform duration-500 ease-in-out"
+        data-aos="fade-rigth"
+        data-aos-duration="1000"
+      >
         {title}
       </h2>
       <div className="w-full">{children}</div>

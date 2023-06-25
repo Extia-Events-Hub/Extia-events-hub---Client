@@ -19,7 +19,10 @@ function Home() {
         {/* Header */}
         <HomeHeader />
 
-        <HomeSection className={"pt-16 md:pt-24 md:p-0 "} title={t("home.events")}>
+        <HomeSection
+          className={"pt-16 md:pt-24 md:p-0 "}
+          title={t("home.events")}
+        >
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {eventsData?.map((event, index) => {
               return <EventCard key={index} event={event} />;
@@ -35,14 +38,17 @@ function Home() {
           </span>
         </HomeSection>
 
-        <HomeSection className={"pt-12 md:pt-24"} title={t("home.collaborators")}>
+        <HomeSection
+          className={"pt-12 md:pt-24"}
+          title={t("home.collaborators")}
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             {eventsData?.map((event, index) => {
               return (
                 <div
                   key={index}
                   data-aos="fade-up"
-                  data-aos-duration="1000"  
+                  data-aos-duration="1000"
                   className="shadow-custom rounded-2xl p-4 flex justify-center items-center"
                 >
                   <h2 className="title3 opacity-30">BRAND</h2>
