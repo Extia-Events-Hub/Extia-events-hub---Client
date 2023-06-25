@@ -7,6 +7,8 @@ import NotFound from '../components/ui/commons/NotFound'
 import AuthContext from '../context/AuthContext'
 import Events from '../views/events/Events'
 import SingleEvent from '../views/singleEvent/SingleEvent'
+import AdminView from '../views/admin/AdminView'
+import CreateEvent from '../views/admin/CreateEvent'
 
 export function Router() {
 
@@ -33,6 +35,9 @@ export function Router() {
                     <Route path='/home' element={<Home />} />
                     <Route path='/events' element={<Events />} />
                     <Route path='/events/:id' element={<SingleEvent />} />
+
+                    <Route path='/admin' element={<AdminView/>}/>
+                    <Route path='/create-event' element={<CreateEvent/>}/>
 
                     <Route path='*' element={<NotFound />} />
                 </Routes>
