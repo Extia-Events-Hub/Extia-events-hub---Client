@@ -1,5 +1,6 @@
 [
     {
+      "id":0,
       "title": {
         "es": "Taller de Reciclaje",
         "en": "Recycling Workshop",
@@ -28,6 +29,7 @@
       "image": "https://ejemplo.com/imagen-taller-reciclaje.jpg"
     },
     {
+      "id":1,
       "title": {
         "es": "Charla sobre Energías Renovables",
         "en": "Talk on Renewable Energy",
@@ -56,6 +58,7 @@
       "image": "https://ejemplo.com/imagen-charla-energias-renovables.jpg"
     },
     {
+      "id":2,
       "title": {
         "es": "Feria de Productos Sostenibles",
         "en": "Sustainable Products Fair",
@@ -84,6 +87,7 @@
       "image": "https://ejemplo.com/imagen-feria-productos-sostenibles.jpg"
     },
     {
+      "id":3,
       "title": {
         "es": "Concurso de Arte Reciclado",
         "en": "Recycled Art Contest",
@@ -112,6 +116,7 @@
       "image": "https://ejemplo.com/imagen-concurso-arte-reciclado.jpg"
     },
     {
+      "id":4,
       "title": {
         "es": "Exposición de Arquitectura Sostenible",
         "en": "Sustainable Architecture Exhibition",
@@ -140,6 +145,7 @@
       "image": "https://ejemplo.com/imagen-exposicion-arquitectura-sostenible.jpg"
     },
     {
+      "id":5,
       "title": {
         "es": "Webinar sobre Agricultura Urbana",
         "en": "Webinar on Urban Agriculture",
