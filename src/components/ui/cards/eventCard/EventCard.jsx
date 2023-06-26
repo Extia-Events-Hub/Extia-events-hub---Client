@@ -10,8 +10,8 @@ export function EventCard({ event, className }) {
   const { language } = useContext(AuthContext);
 
   const locationEvent =
-    event?.mode[language]?.isPresential === true
-      ? event?.mode[language]?.location
+    event?.mode?.[language]?.isPresential === true
+      ? event?.mode?.[language]?.location
       : t("eventCard.online");
   const date = event?.startDate;
 
@@ -30,7 +30,7 @@ export function EventCard({ event, className }) {
       </div>
       <div className="p-4 font-roboto w-full gap-4 flex flex-col items-start">
         <h3 className="font-roboto font-bold text-lg">
-          {event?.title[language]}
+          {event?.title?.[language]}
         </h3>
         <h2 className="text-primary">
           {t("eventCard.date")}:{event && date}
