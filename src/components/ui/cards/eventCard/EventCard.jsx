@@ -4,7 +4,7 @@ import Button from "../../commons/Button";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-export function EventCard({ event }) {
+export function EventCard({ event, className }) {
   const { t } = useTranslation("global");
 
   const { lenguage } = useContext(AuthContext);
@@ -18,7 +18,7 @@ export function EventCard({ event }) {
 
   return (
     <article
-      className=" min-w-[18rem] bg-white shadow-custom rounded-2xl overflow-hidden flex flex-col items-center h-auto"
+      className={`min-w-[18rem] bg-white shadow-custom rounded-2xl overflow-hidden flex flex-col items-center h-auto ${className}`}
       data-aos="fade-up"
       data-aos-duration="1000"
     >
