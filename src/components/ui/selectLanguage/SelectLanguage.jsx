@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import { HiOutlineChevronDown } from "react-icons/hi2";
 
 function SelectLanguage({ className }) {
-  const [openLenguages, setOpenLenguages] = useState(false);
-  const { lenguage, setLenguage } = useContext(AuthContext);
+  const [openLanguages, setOpenLanguages] = useState(false);
+  const { language, setLanguage } = useContext(AuthContext);
   const [t, i18] = useTranslation("global");
 
   return (
@@ -17,12 +17,12 @@ function SelectLanguage({ className }) {
     >
       <span
         className="font-bold w-full h-full flex justify-center items-center cursor-pointer select-none gap-4 "
-        onClick={() => setOpenLenguages(!openLenguages)}
+        onClick={() => setOpenLanguages(!openLanguages)}
       >
-        {lenguage && lenguage}{" "}
+        {language && language.toUpperCase()}
         <HiOutlineChevronDown
           className={
-            openLenguages ? "transition-all" : "transition-all rotate-180"
+            openLanguages ? "transition-all" : "transition-all rotate-180"
           }
         />
       </span>
@@ -30,7 +30,7 @@ function SelectLanguage({ className }) {
       <ul
         tabIndex={0}
         className={
-          openLenguages
+          openLanguages
             ? "shadow-custom rounded-2xl p-4 absolute w-full top-0 mt-16 bg-white transition-all"
             : "hidden"
         }
@@ -38,8 +38,8 @@ function SelectLanguage({ className }) {
         <li
           className="flex justify-center hover:bg-neutral-100 cursor-pointer"
           onClick={() => {
-            setLenguage("ES");
-            setOpenLenguages(false);
+            setLanguage("es");
+            setOpenLanguages(false);
             i18.changeLanguage("es");
           }}
         >
@@ -48,8 +48,8 @@ function SelectLanguage({ className }) {
         <li
           className="flex justify-center hover:bg-neutral-100 cursor-pointer"
           onClick={() => {
-            setLenguage("EN");
-            setOpenLenguages(false);
+            setLanguage("en");
+            setOpenLanguages(false);
             i18.changeLanguage("en");
           }}
         >
@@ -58,8 +58,8 @@ function SelectLanguage({ className }) {
         <li
           className="flex justify-center hover:bg-neutral-100 cursor-pointer"
           onClick={() => {
-            setLenguage("FR");
-            setOpenLenguages(false);
+            setLanguage("fr");
+            setOpenLanguages(false);
             i18.changeLanguage("fr");
           }}
         >
