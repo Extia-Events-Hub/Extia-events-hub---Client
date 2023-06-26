@@ -1,15 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../../components/ui/navbar/Navbar";
 import Footer from "../../components/ui/footer/Footer";
-import eventsData from "../../utilities/eventsData.json";
+import eventsList from "../../utilities/eventsData.json";
 import { EventCard } from "../../components/ui/cards/eventCard/EventCard";
 import { HiOutlineChevronDown } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
+import AuthContext from "../../context/AuthContext";
 
 function Events() {
   const { t } = useTranslation("global");
   const [openFilters, setOpenFilters] = useState(false);
+  const { lenguage } = useContext(AuthContext);
   const [filterSelected, setFilterSelected] = useState(t("events.recently"));
+  const [eventListData, setEventListData] = useState(eventsList);
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleInputChange = (e) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+  const filterModeIsPresential = (isPresential) => {
+    const cloneEventList = eventsList.filter(
+      (event) =>
+        event.mode[lenguage.toLowerCase()].isPresential === isPresential
+    );
+
+    return setEventListData(cloneEventList);
+  };
+
+  const filteredEvents = eventListData.filter((event) => {
+    const title = event.title[lenguage.toLowerCase()].toLowerCase();
+    const description =
+      event.shortDescription[lenguage.toLowerCase()].toLowerCase();
+
+    return title.includes(searchTerm) || description.includes(searchTerm);
+  });
 
   useEffect(() => {
     setFilterSelected(t("events.recently"));
@@ -34,13 +60,21 @@ function Events() {
         </div>
         <div className="w-full  md:p-0  flex flex-col gap-8">
           {/* Searchbar */}
-          <div className="w-full flex flex-col md:flex-row gap-4 md:gap-8">
+          <div className="w-full flex flex-col md:flex-row gap-4 md:gap-8 z-20">
             <input
+              data-aos="fade-right"
+              data-aos-duration="1300"
               type="text"
+              value={searchTerm}
+              onChange={handleInputChange}
               placeholder={t("events.searchEvent") + "..."}
               className="input rounded-full shadow-custom w-full md:w-2/3"
             />
-            <div className="w-full py-3 md:w-1/3 shadow-custom flex justify-center items-center rounded-full backdrop-filter relative backdrop-blur-md bg-white bg-opacity-60 hover:bg-white ">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1300"
+              className="w-full py-3 md:w-1/3 shadow-custom flex justify-center items-center rounded-full backdrop-filter relative backdrop-blur-md bg-white bg-opacity-60 hover:bg-white "
+            >
               <span
                 className=" w-full font-roboto h-full flex justify-center items-center cursor-pointer text-primary select-none  "
                 onClick={() => setOpenFilters(!openFilters)}
@@ -62,7 +96,7 @@ function Events() {
                 tabIndex={0}
                 className={
                   openFilters
-                    ? "shadow-custom rounded-2xl p-4 absolute w-full top-0 mt-16 bg-white transition-all"
+                    ? "shadow-custom rounded-2xl p-4 absolute w-full top-0 mt-16 bg-white transition-all z-40"
                     : "hidden"
                 }
               >
@@ -89,6 +123,7 @@ function Events() {
                   onClick={() => {
                     setOpenFilters(false);
                     setFilterSelected(t("events.online"));
+                    filterModeIsPresential(false);
                   }}
                 >
                   {t("events.online")}
@@ -98,6 +133,7 @@ function Events() {
                   onClick={() => {
                     setOpenFilters(false);
                     setFilterSelected(t("events.presential"));
+                    filterModeIsPresential(true);
                   }}
                 >
                   {t("events.presential")}
@@ -107,12 +143,12 @@ function Events() {
           </div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {eventsData?.map((event, index) => {
-              return <EventCard key={index} event={event} />;
-            })}
+            {filteredEvents &&
+              filteredEvents?.map((event, index) => {
+                return <EventCard key={index} event={event} />;
+              })}
           </div>
         </div>
-        {/* <div className="w-full aspect-video md:aspect-[6/2] shadow-custom rounded-2xl"></div> */}
       </div>
       <Footer className="mt-24" />
     </>
