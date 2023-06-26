@@ -46,7 +46,8 @@
     "register":"Register",
     "name":"Name",
     "email":"Email",
-    "getMyTicket":"Get my ticket now"
+    "getMyTicket":"Get my ticket now",
+    "here":"here"
   }
 
 }

@@ -43,10 +43,11 @@
   "singleEvent": {
     "whereAndWhen": "Lugar y fecha",
     "aboutTheEvent": "Sobre el evento",
-    "register": "Registrarse",
+    "register": "Registrate",
     "name": "Nombre",
     "email": "Email",
-    "getMyTicket": "Obtener mi entrada ahora"
+    "getMyTicket": "Obtener mi entrada ahora",
+    "here":"aquí"
   }  
   
 }

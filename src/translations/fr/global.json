@@ -46,6 +46,7 @@
     "register": "S'inscrire à l'événement",
     "name": "Nom",
     "email": "Email",
-    "getMyTicket": "Obtenir mon billet maintenant"
+    "getMyTicket": "Obtenir mon billet maintenant",
+    "here":"ici"
   }  
 }
