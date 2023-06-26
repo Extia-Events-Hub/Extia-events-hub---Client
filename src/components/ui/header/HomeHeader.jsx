@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import calendar_image from "../../../assets/images/calendar_image_3d.png";
+import calendarImage from "../../../assets/images/calendar_image_3d.png";
 import { HiArrowDown } from "react-icons/hi2";
 
 function HomeHeader() {
@@ -26,12 +26,12 @@ function HomeHeader() {
         <div className="w-full md:w-1/2 flex justify-center items-center  relative">
           <div className="w-4/5 aspect-square rounded-full absolute bg-primary opacity-30 shadow-custom"></div>
           <img
-            src={calendar_image}
+            src={calendarImage}
             className=" max-w-xs md:max-w-full drop-shadow-2xl"
             data-aos="fade-up"
             data-aos-duration="2000"
             data-aos-delay="200"
-            alt="calendar_image"
+            alt="calendarImage"
           ></img>
         </div>
       </div>

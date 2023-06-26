@@ -113,9 +113,12 @@ function EventsList({ className, eventsList, setEventSelected }) {
         <span className="divider"></span>
         <ul className="flex max-h-[30vh] md:max-h-[75%]   flex-col  overflow-y-auto">
           {filteredEvents &&
-            filteredEvents?.map((event) => {
+            filteredEvents?.map((event, index) => {
               return (
-                <li className="w-full flex flex-col md:flex-row gap-4 p-4 hover:bg-gray-100 cursor-pointer md:items-center justify-between">
+                <li
+                  key={index}
+                  className="w-full flex flex-col md:flex-row gap-4 p-4 hover:bg-gray-100 cursor-pointer md:items-center justify-between"
+                >
                   <span className="flex flex-col">
                     <h3 className="text-lg font-bold">
                       {event.title[lenguage.toLowerCase()]}

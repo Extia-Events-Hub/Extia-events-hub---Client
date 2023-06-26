@@ -1,44 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/ui/navbar/Navbar";
 import Footer from "../../components/ui/footer/Footer";
 import eventsList from "../../utilities/eventsData.json";
 import { EventCard } from "../../components/ui/cards/eventCard/EventCard";
-import { HiOutlineChevronDown } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
-import AuthContext from "../../context/AuthContext";
 import FilterEvents from "../../components/filterEvents/FilterEvents";
 
 function Events() {
   const { t } = useTranslation("global");
-  // const [openFilters, setOpenFilters] = useState(false);
-  const { lenguage } = useContext(AuthContext);
-  // const [filterSelected, setFilterSelected] = useState(t("events.recently"));
   const [initialEventList, setInitialEventList] = useState(eventsList);
   const [filteredEventList, setFilteredEventList] = useState(eventsList);
-
-  const [searchTerm, setSearchTerm] = useState("");
-
-  // const handleInputChange = (e) => {
-  //   setSearchTerm(e.target.value.toLowerCase());
-  // };
-
-  // const filterModeIsPresential = (isPresential) => {
-  //   const cloneEventList = eventsList.filter(
-  //     (event) =>
-  //       event.mode[lenguage.toLowerCase()].isPresential === isPresential
-  //   );
-
-  //   return setEventListData(cloneEventList);
-  // };
-
-  // const filteredEvents = eventListData.filter((event) => {
-  //   const title = event.title[lenguage.toLowerCase()].toLowerCase();
-  //   const description =
-  //     event.shortDescription[lenguage.toLowerCase()].toLowerCase();
-
-  //   return title.includes(searchTerm) || description.includes(searchTerm);
-  // });
-
   return (
     <>
       <Navbar className="fixed w-full  md:px-[10%] z-30" />

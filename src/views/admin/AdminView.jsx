@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/ui/navbar/Navbar";
 import { Link } from "react-router-dom";
-import {
-  HiOutlineChevronDown,
-  HiOutlineMagnifyingGlass,
-} from "react-icons/hi2";
-import Button from "../../components/ui/commons/Button";
 import { useTranslation } from "react-i18next";
 import EventsList from "../../components/templates/eventsList/EventsList";
 import eventsJson from "../../utilities/eventsData.json";

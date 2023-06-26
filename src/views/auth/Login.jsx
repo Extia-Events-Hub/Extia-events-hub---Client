@@ -1,6 +1,5 @@
 import React from "react";
 import FormLogin from "../../components/forms/auth/FormLogin";
-import ToggleDarkMode from "../../components/toggleDarkMode/ToggleDarkMode";
 
 function Login() {
   return (

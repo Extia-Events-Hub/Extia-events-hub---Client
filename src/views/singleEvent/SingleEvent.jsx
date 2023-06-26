@@ -3,11 +3,9 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../components/ui/navbar/Navbar";
 import Footer from "../../components/ui/footer/Footer";
 import { HiCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
-import Button from "../../components/ui/commons/Button";
 import { useTranslation } from "react-i18next";
 import { eventService } from "../../services/events.service";
 import AuthContext from "../../context/AuthContext";
-import eventsJson from "../../utilities/eventsData.json";
 import moment from "moment";
 import EventRegisterFixed from "../../components/forms/eventRegister/EventRegisterFIxed";
 import EventRegister from "../../components/forms/eventRegister/EventRegister";
@@ -23,7 +21,6 @@ function SingleEvent() {
   const getEvent = async () => {
     const { data } = await eventService.show(id);
     setEvent(data?.data);
-
   };
 
   useEffect(() => {
@@ -52,7 +49,9 @@ function SingleEvent() {
                 <span className="loading loading-dots loading-md md:loading-lg"></span>
               )}
             </h2>
-            <p data-aos="fade-up" data-aos-duration="1000">{event?.shortDescription?.[language]}</p>
+            <p data-aos="fade-up" data-aos-duration="1000">
+              {event?.shortDescription?.[language]}
+            </p>
             <span className="divider"></span>
 
             <h2 className="title2">{t("singleEvent.whereAndWhen")} </h2>

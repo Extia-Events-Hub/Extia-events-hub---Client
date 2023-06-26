@@ -57,9 +57,6 @@ function FilterEvents({
       case optionsFilterDic.PRESENTIAL:
         filterModeIsPresential(true);
         break;
-      // case optionsFilterDic.RECENTS:
-      //   console.log("filter by recents");
-      //   break;
       default:
         console.log("no valid filter");
         break;
@@ -123,8 +120,8 @@ function FilterEvents({
           }
         >
           {arrOptionsFilters &&
-            arrOptionsFilters?.map((option) => {
-              return <ItemList option={option} />;
+            arrOptionsFilters?.map((option, index) => {
+              return <ItemList key={index} option={option} />;
             })}
         </ul>
       </div>

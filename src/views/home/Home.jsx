@@ -31,7 +31,7 @@ function Home() {
       <div className="w-full px-[5%] md:px-[10%] pt-[15vh] flex flex-col relative min-h-screen gap-8">
         {/* Header */}
         <HomeHeader />
-        
+
         <HomeSection
           className={"pt-16 md:pt-24 md:p-0 "}
           title={t("home.events")}
