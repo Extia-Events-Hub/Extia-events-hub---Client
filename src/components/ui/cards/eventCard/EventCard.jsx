@@ -25,7 +25,7 @@ export function EventCard({ event, className }) {
         <img
           src={event?.image}
           alt="cover event"
-          className="w-full aspect-video"
+          className="w-full aspect-video object-cover"
         />
       </div>
       <div className="p-4 font-roboto w-full gap-4 flex flex-col items-start">
