@@ -10,8 +10,8 @@ export function EventCard({ event, className }) {
   const { language } = useContext(AuthContext);
 
   const locationEvent =
-    event.mode[language].isPresential === true
-      ? event.mode[language].location
+    event?.mode[language]?.isPresential === true
+      ? event?.mode[language]?.location
       : t("eventCard.online");
   const date = event?.startDate;
 
