@@ -1,15 +1,36 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../../components/ui/navbar/Navbar";
 import Footer from "../../components/ui/footer/Footer";
 import eventsList from "../../utilities/eventsData.json";
 import { EventCard } from "../../components/ui/cards/eventCard/EventCard";
 import { useTranslation } from "react-i18next";
 import FilterEvents from "../../components/filterEvents/FilterEvents";
+import { eventService } from "../../services/events.service";
+import { createEventAdapter } from "../../adapters/event.adapter";
+import AuthContext from "../../context/AuthContext";
 
 function Events() {
   const { t } = useTranslation("global");
-  const [initialEventList, setInitialEventList] = useState(eventsList);
-  const [filteredEventList, setFilteredEventList] = useState(eventsList);
+
+  const { language } = useContext(AuthContext);
+
+  const [eventsData, setEventsData] = useState(null);
+
+  const [filteredEventList, setFilteredEventList] = useState(eventsData);
+
+  const getEvents = async () => {
+    const { data } = await eventService.index();
+    const eventsAdapted = await data?.data?.map((event) => {
+      return createEventAdapter(event, language);
+    });
+    setEventsData(eventsAdapted);
+    setFilteredEventList(eventsAdapted)
+  };
+
+  useEffect(() => {
+    getEvents();
+  }, []);
+
   return (
     <>
       <Navbar className="fixed w-full  md:px-[10%] z-30" />
@@ -30,7 +51,7 @@ function Events() {
         <div className="w-full  md:p-0  flex flex-col gap-8">
           {/* Searchbar */}
           <FilterEvents
-            initialList={initialEventList}
+            initialList={eventsData}
             setFilteredEventList={setFilteredEventList}
           />
 
