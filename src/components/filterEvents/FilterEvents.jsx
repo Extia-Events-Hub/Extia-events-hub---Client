@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import AuthContext from "../../context/AuthContext";
+import React, {  useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HiOutlineChevronDown } from "react-icons/hi2";
 
@@ -11,21 +10,20 @@ function FilterEvents({
   filterNextWeek,
 }) {
   const { t } = useTranslation("global");
-  const { language } = useContext(AuthContext);
 
   const [openFilters, setOpenFilters] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterSelected, setFilterSelected] = useState(t("events.recently"));
 
   const handleInputChange = (e) => {
-    setSearchTerm(e.target.value.toLowerCase());
+    setSearchTerm(e.target.value?.toLowerCase());
     setFilteredEventList(filteredEvents);
   };
 
-  const filteredEvents = initialList.filter((event) => {
-    const title = event.title[language].toLowerCase();
-    const description = event.shortDescription[language].toLowerCase();
-    return title.includes(searchTerm) || description.includes(searchTerm);
+  const filteredEvents = initialList?.filter((event) => {
+    const title = event?.title?.toLowerCase();
+    const description = event?.shortDescription?.toLowerCase();
+    return title?.includes(searchTerm) || description?.includes(searchTerm);
   });
 
   const ItemList = ({ option }) => {
@@ -65,7 +63,7 @@ function FilterEvents({
 
   const filterModeIsPresential = (isPresential) => {
     const cloneEventList = initialList?.filter(
-      (event) => event.mode[language].isPresential === isPresential
+      (event) => event.isPresential === isPresential
     );
     setFilteredEventList(cloneEventList);
   };
