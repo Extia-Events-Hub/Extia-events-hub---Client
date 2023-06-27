@@ -8,6 +8,7 @@ import { HiArrowRight } from "react-icons/hi2";
 import HomeSection from "../../components/ui/section/homeSection/HomeSection";
 import HomeHeader from "../../components/ui/header/HomeHeader";
 import { eventService } from "../../services/events.service";
+import { createEventAdapter } from "../../adapters/event.adapter";
 
 function Home() {
   const { t } = useTranslation("global");
@@ -15,8 +16,10 @@ function Home() {
 
   const getEvents = async () => {
     const { data } = await eventService.index();
-    console.log(data.data);
-    setEventsData(data.data);
+    const eventsAdapted = data?.data?.map((event) => {
+      return createEventAdapter(event);
+    });
+    setEventsData(eventsAdapted);
   };
 
   useEffect(() => {
