@@ -9,6 +9,7 @@ import AuthContext from "../../context/AuthContext";
 import moment from "moment";
 import EventRegisterFixed from "../../components/forms/eventRegister/EventRegisterFIxed";
 import EventRegister from "../../components/forms/eventRegister/EventRegister";
+import { createEventAdapter } from "../../adapters/event.adapter";
 
 function SingleEvent() {
   const [event, setEvent] = useState(null);
@@ -20,7 +21,7 @@ function SingleEvent() {
 
   const getEvent = async () => {
     const { data } = await eventService.show(id);
-    setEvent(data?.data);
+    setEvent(createEventAdapter(data?.data,language));
   };
 
   useEffect(() => {
@@ -38,19 +39,19 @@ function SingleEvent() {
         >
           <img
             src={event?.image}
-            alt={event?.title?.[language]}
+            alt={event?.title}
             className="w-full h-full  object-cover"
           />
         </div>
         <div className="w-full h-full  flex gap-8">
           <div className=" w-full md:w-1/2 flex pb-12  flex-col gap-4">
             <h2 data-aos="fade-up" data-aos-duration="1000" className="title2">
-              {event?.title?.[language] ?? (
+              {event?.title ?? (
                 <span className="loading loading-dots loading-md md:loading-lg"></span>
               )}
             </h2>
             <p data-aos="fade-up" data-aos-duration="1000">
-              {event?.shortDescription?.[language]}
+              {event?.shortDescription}
             </p>
             <span className="divider"></span>
 
@@ -78,10 +79,10 @@ function SingleEvent() {
               <div className="w-1/2 flex flex-col items-center">
                 <HiOutlineMapPin className="w-16 h-16 md:w-20 md:h-20 aspect-square" />
                 <p className="text-md font-roboto">
-                  {event?.mode?.[language]?.isPresential
+                  {event?.isPresential
                     ? t("events.presential") + ": "
                     : t("events.online") + ": "}
-                  {event?.mode?.[language].location}
+                  {event?.location}
                 </p>
               </div>
             </div>
@@ -90,7 +91,7 @@ function SingleEvent() {
 
             <h2 className="title2">{t("singleEvent.aboutTheEvent")}</h2>
             <div className="flex flex-col gap-4 font-roboto">
-              {event?.title?.[language] ?? (
+              {event?.title ?? (
                 <span className="loading loading-dots loading-md md:loading-lg"></span>
               )}
             </div>
