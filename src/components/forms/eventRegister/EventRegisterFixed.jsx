@@ -21,12 +21,17 @@ const EventRegisterFixed = ({ id }) => {
       });
       setIsSuscribed(true);
     } catch (error) {
-      console.log(error);
-      swal({
-        title: "Error",
-        text: error?.message,
-        icon: "error",
-      });
+      error?.response?.status === 400
+        ? swal({
+            title: "Error",
+            text: t("singleEvent.userRegisterError"),
+            icon: "error",
+          })
+        : swal({
+            title: "Error",
+            text: error?.message,
+            icon: "error",
+          });
     }
   };
 

@@ -82,6 +82,7 @@
     "email": "Email",
     "getMyTicket": "Get my ticket now",
     "here": "here",
+    "userRegisterError": "This email is already registered for this event",
     "successRegister": "Successfully registered"
   }
 }
