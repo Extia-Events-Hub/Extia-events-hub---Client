@@ -5,13 +5,13 @@
   },
 
   "navbar": {
-    "titleNav":"EVENTS HUB",
+    "titleNav": "EVENTS HUB",
     "language": "IDIOMA",
-    "login":"INICIAR SESIÓN",
-    "eventsLink":"AGENDA DE EVENTOS",
-    "admin":"ADMINISTRAR",
-    "home":"HOME",
-    "logout":"CERRAR SESIÓN"
+    "login": "INICIAR SESIÓN",
+    "eventsLink": "AGENDA DE EVENTOS",
+    "admin": "ADMINISTRAR",
+    "home": "HOME",
+    "logout": "CERRAR SESIÓN"
   },
 
   "home": {
@@ -23,7 +23,7 @@
   },
 
   "events": {
-    "headerTitle":"Agenda de eventos",
+    "headerTitle": "Agenda de eventos",
     "headerDescription": "Desarrolla tu potencial para un mundo más sostenible. Únete a nuestros eventos eco-amigables en Barcelona y participa en la transformación. Aprende nuevas habilidades, conecta con personas comprometidas y encuentra la inspiración para vivir de forma más consciente. ¡Empieza tu viaje sostenible hoy mismo participando en uno de nuestros eventos!",
     "searchEvent": "Buscar evento",
     "filterBy": "Filtrar por",
@@ -47,31 +47,31 @@
     "participants": "Participantes",
     "viewEvent": "Ver evento",
     "editEvent": "Editar evento",
-    "deleteEvent":"Eliminar evento",
-    "confirmDelete":"Estás a punto de eliminar un evento",
-    "cancel":"Cancelar",
-    "confirm":"Confirmar",
-    "successDelete":"Eliminado con éxito",
-    "reset":"Reset"
+    "deleteEvent": "Eliminar evento",
+    "confirmDelete": "Estás a punto de eliminar un evento",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "successDelete": "Eliminado con éxito",
+    "reset": "Reset"
   },
 
-  "formEvent":{
-    "editingEvent":"Editando evento",
-    "titleEvent":"Titulo del evento",
-    "shortDescription":"Descripción corta",
-    "longDescription":"Descripción larga",
-    "mode":"Modalidad",
-    "presential":"Presencial",
-    "online":"En linea",
-    "location":"Ubicación",
-    "initDate":"Fecha de inicio",
-    "endDate":"Fecha de fin",
-    "startTime":"Hora de inicio",
-    "endTime":"Hora de fin",
-    "maxParticipants":"Máximo de participantes",
-    "image":"Imagen",
-    "createEvent":"Crear nuevo evento",
-    "noFileSelected":"Ningún archivo seleccionado"
+  "formEvent": {
+    "editingEvent": "Editando evento",
+    "titleEvent": "Titulo del evento",
+    "shortDescription": "Descripción corta",
+    "longDescription": "Descripción larga",
+    "mode": "Modalidad",
+    "presential": "Presencial",
+    "online": "En linea",
+    "location": "Ubicación",
+    "initDate": "Fecha de inicio",
+    "endDate": "Fecha de fin",
+    "startTime": "Hora de inicio",
+    "endTime": "Hora de fin",
+    "maxParticipants": "Máximo de participantes",
+    "image": "Imagen",
+    "createEvent": "Crear nuevo evento",
+    "noFileSelected": "Ningún archivo seleccionado"
   },
 
   "singleEvent": {
@@ -81,6 +81,7 @@
     "name": "Nombre",
     "email": "Email",
     "getMyTicket": "Obtener mi entrada ahora",
-    "here": "aquí"
+    "here": "aquí",
+    "successRegister": "Registro realizado con éxito"
   }
 }

@@ -1,28 +1,36 @@
 {
   "eventCard": {
-    "online": "événement en ligne",
+    "online": "Événement en ligne",
     "date": "Date"
   },
 
   "navbar": {
-    "language": "Langue"
+    "titleNav": "EVENTS HUB",
+    "language": "LANGUE",
+    "login": "CONNEXION",
+    "eventsLink": "AGENDA DES ÉVÉNEMENTS",
+    "admin": "ADMINISTRER",
+    "home": "ACCUEIL",
+    "logout": "DÉCONNEXION"
   },
 
   "home": {
     "titleEventsHub": "Extia Events Hub",
-    "descriptionEventsHub": "",
+    "descriptionEventsHub": "Découvrez un Barcelone durable : explorez des événements et des activités qui promeuvent l'écologie et la durabilité dans votre ville. Rejoignez la communauté et participez au changement.",
     "events": "Événements",
     "moreEvents": "Plus d'événements",
     "collaborators": "Collaborateurs"
   },
 
   "events": {
+    "headerTitle": "Agenda des événements",
+    "headerDescription": "Développez votre potentiel pour un monde plus durable. Rejoignez nos événements éco-responsables à Barcelone et participez à la transformation. Apprenez de nouvelles compétences, connectez-vous avec des personnes engagées et trouvez l'inspiration pour une vie consciente. Commencez votre voyage durable dès aujourd'hui en participant à l'un de nos événements !",
     "searchEvent": "Rechercher un événement",
     "filterBy": "Filtrer par",
-    "recently": "Récent",
+    "recently": "Récents",
     "nextWeek": "Semaine prochaine",
     "online": "En ligne",
-    "presential": "En personne"
+    "presential": "Présentiel"
   },
 
   "admin": {
@@ -37,17 +45,43 @@
     "presential": "Présentiel",
     "viewEventsDetails": "Voir les détails de l'événement",
     "participants": "Participants",
-    "viewEvent":"Voir l'événement",
-    "editEvent": "Modifier l'événement"
+    "viewEvent": "Voir l'événement",
+    "editEvent": "Modifier l'événement",
+    "deleteEvent": "Supprimer l'événement",
+    "confirmDelete": "Vous êtes sur le point de supprimer un événement",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "successDelete": "Supprimé avec succès",
+    "reset": "Réinitialiser"
   },
-  
+
+  "formEvent": {
+    "editingEvent": "Modification de l'événement",
+    "titleEvent": "Titre de l'événement",
+    "shortDescription": "Description courte",
+    "longDescription": "Description longue",
+    "mode": "Modalité",
+    "presential": "Présentiel",
+    "online": "En ligne",
+    "location": "Emplacement",
+    "initDate": "Date de début",
+    "endDate": "Date de fin",
+    "startTime": "Heure de début",
+    "endTime": "Heure de fin",
+    "maxParticipants": "Nombre maximum de participants",
+    "image": "Image",
+    "createEvent": "Créer un nouvel événement",
+    "noFileSelected": "Aucun fichier sélectionné"
+  },
+
   "singleEvent": {
     "whereAndWhen": "Lieu et date",
     "aboutTheEvent": "À propos de l'événement",
-    "register": "S'inscrire à l'événement",
+    "register": "S'inscrire",
     "name": "Nom",
     "email": "Email",
     "getMyTicket": "Obtenir mon billet maintenant",
-    "here":"ici"
-  }  
+    "here": "ici",
+    "successRegister": "Inscription réussie"
+  }
 }
