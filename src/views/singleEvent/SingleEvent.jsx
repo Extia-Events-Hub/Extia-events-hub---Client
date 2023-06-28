@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { eventService } from "../../services/events.service";
 import AuthContext from "../../context/AuthContext";
 import moment from "moment";
-import EventRegisterFixed from "../../components/forms/eventRegister/EventRegisterFIxed";
+import EventRegisterFixed from "../../components/forms/eventRegister/EventRegisterFixed";
 import EventRegister from "../../components/forms/eventRegister/EventRegister";
 import { createEventAdapter } from "../../adapters/event.adapter";
 
