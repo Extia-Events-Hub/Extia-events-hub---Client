@@ -16,7 +16,7 @@ function SelectLanguage({ className }) {
       }
     >
       <span
-        className="font-bold w-full h-full flex justify-center items-center cursor-pointer select-none gap-4 "
+        className="font-bold w-full h-full flex justify-center items-center cursor-pointer select-none gap-4 hover:text-primary transition-all "
         onClick={() => setOpenLanguages(!openLanguages)}
       >
         {language && language.toUpperCase()}
@@ -36,7 +36,7 @@ function SelectLanguage({ className }) {
         }
       >
         <li
-          className="flex justify-center hover:bg-neutral-100 cursor-pointer"
+          className="flex justify-center hover:bg-neutral-100 cursor-pointer hover:text-primary"
           onClick={() => {
             setLanguage("es");
             setOpenLanguages(false);
@@ -46,7 +46,7 @@ function SelectLanguage({ className }) {
           ES
         </li>
         <li
-          className="flex justify-center hover:bg-neutral-100 cursor-pointer"
+          className="flex justify-center hover:bg-neutral-100 cursor-pointer hover:text-primary"
           onClick={() => {
             setLanguage("en");
             setOpenLanguages(false);
@@ -56,7 +56,7 @@ function SelectLanguage({ className }) {
           EN
         </li>
         <li
-          className="flex justify-center hover:bg-neutral-100 cursor-pointer"
+          className="flex justify-center hover:bg-neutral-100 cursor-pointer hover:text-primary"
           onClick={() => {
             setLanguage("fr");
             setOpenLanguages(false);
