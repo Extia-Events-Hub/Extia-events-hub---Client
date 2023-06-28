@@ -10,10 +10,10 @@ export const authService = {
     return axios.put(baseUrl + "/users/" + userId, data);
   },
   login: (data) => {
-    return axios.post(baseUrl + "/auth/login", data);
+    return axios.post(baseUrl + "/login", data);
   },
   register: (data) => {
-    return axios.post(baseUrl + "/auth/register", data);
+    return axios.post(baseUrl + "/register", data);
   },
   logout: () => {
     return axios.get(baseUrl + "/auth/logout");
