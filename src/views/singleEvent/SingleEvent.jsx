@@ -97,11 +97,11 @@ function SingleEvent() {
             </div>
           </div>
           <div className=" w-full hidden md:block md:w-1/2  min-h-screen ">
-            <EventRegister className={"sticky top-[12vh]"} />
+            <EventRegister id={event?.id} className={"sticky top-[12vh]"} />
           </div>
         </div>
       </div>
-      <EventRegisterFixed />
+      <EventRegisterFixed id={event?.id} />
       <Footer className="pb-28" />
     </>
   );
