@@ -1,11 +1,25 @@
-
-export const createEventAdapter = (event,language) => ({
+export const createEventAdapter = (event, language) => ({
   id: event.id,
-  title: JSON.parse(event?.title)?.[language],
-  shortDescription: JSON.parse(event?.shortDescription)?.[language],
-  longDescription: JSON.parse(event?.longDescription)?.[language],
-  isPresential: JSON.parse(event?.mode)?.[language]?.isPresential,
-  location: JSON.parse(event?.mode)?.[language]?.location,
+  title:
+    typeof event?.title === "string"
+      ? JSON.parse(event?.title)?.[language]
+      : event?.title[language],
+  shortDescription:
+    typeof event?.shortDescription === "string"
+      ? JSON.parse(event?.shortDescription)?.[language]
+      : event?.shortDescription[language],
+  longDescription:
+    typeof event?.longDescription === "string"
+      ? JSON.parse(event?.longDescription)?.[language]
+      : event?.longDescription[language],
+  isPresential:
+    typeof event?.mode === "string"
+      ? JSON.parse(event?.mode)?.[language]?.isPresential
+      : event?.mode?.[language]?.isPresential,
+  location:
+    typeof event?.mode === "string"
+      ? JSON.parse(event?.mode)?.[language]?.location
+      : event?.mode?.[language]?.location,
   startDate: event?.startDate,
   endDate: event?.endDate,
   startTime: event?.startTime,
