@@ -35,7 +35,8 @@ $ npm run dev
 - The backend repository is essential for the proper functioning of the project. [Click here to access the backend repository](https://i.imgur.com)
 
 ## 🕹️ Demo
-![DEMO IMG](https://https://i.imgur.com/75RMfTO.png)
+You can access the live demo [here!](https://extia-events-hub-client-nine.vercel.app)
+![DEMO IMG](https://i.imgur.com/75RMfTO.png)
 ![DEMO IMG](https://i.imgur.com/zqouE3x.png)
 
 
