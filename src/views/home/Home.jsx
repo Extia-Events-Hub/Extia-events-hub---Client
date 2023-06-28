@@ -19,7 +19,7 @@ function Home() {
     const eventsAdapted = data?.data?.map((event) => {
       return createEventAdapter(event);
     });
-    setEventsData(eventsAdapted);
+    setEventsData(eventsAdapted?.slice(0,6));
   };
 
   useEffect(() => {
