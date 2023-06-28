@@ -9,7 +9,7 @@ import InputForm from "../../ui/commons/InputForm";
 
 function FormLogin({ className }) {
   const { register, handleSubmit } = useForm();
-  const { setToken,user,setUser } = useContext(AuthContext);
+  const { setToken, user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const onSubmit = async (dataForm) => {
@@ -23,7 +23,7 @@ function FormLogin({ className }) {
       });
       navigate("/home");
     } catch (error) {
-      console.log(error)
+      console.log(error);
       swal({
         title: "Error",
         // text: errorMessage,

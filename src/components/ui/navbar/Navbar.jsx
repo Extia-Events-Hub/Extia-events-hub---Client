@@ -17,7 +17,6 @@ function Navbar({ className }) {
   const { setUser, setToken, token } = useContext(AuthContext);
 
   const [openNav, setOpenNav] = useState(false);
-  console.log("token", token && "existe");
 
   const logout = () => {
     swal({

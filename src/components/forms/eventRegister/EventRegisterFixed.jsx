@@ -4,6 +4,7 @@ import Button from "../../ui/commons/Button";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
 import { HiCheckCircle } from "react-icons/hi2";
+import { eventService } from "../../../services/events.service";
 
 const EventRegisterFixed = ({ id }) => {
   const { t } = useTranslation("global");
@@ -11,9 +12,9 @@ const EventRegisterFixed = ({ id }) => {
   const [isSuscribed, setIsSuscribed] = useState(false);
 
   const submitRegister = async (formData) => {
-    let dataSubmit = { ...formData, event_id: id };
+    const dataSubmit = { ...formData, event_id: id };
     try {
-      const {data} = await eventService.registerEvent(dataSubmit);
+      const { data } = await eventService.registerEvent(dataSubmit);
       swal({
         text: "Success",
         icon: "success",

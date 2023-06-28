@@ -9,18 +9,18 @@ import InputForm from "../../ui/commons/InputForm";
 
 function FormRegister({ className }) {
   const { register, handleSubmit } = useForm();
-  const { setToken, user,setUser } = useContext(AuthContext);
+  const { setToken,  setUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const onSubmit = async (dataForm) => {
-    let dataSubmit = {
+    const dataSubmit = {
       ...dataForm,
-      role:1,
-    }
+      role: 1,
+    };
     try {
       const { data } = await authService.register(dataSubmit);
       setToken(data.access_token);
-      setUser(data.user)
+      setUser(data.user);
       swal({
         text: "Tu cuenta ha sido creada con éxito",
         icon: "success",
