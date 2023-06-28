@@ -1,52 +1,87 @@
 {
   "eventCard": {
-    "online": "Online event",
+    "online": "Online Event",
     "date": "Date"
   },
 
   "navbar": {
-    "language": "Language"
+    "titleNav": "EVENTS HUB",
+    "language": "LANGUAGE",
+    "login": "LOGIN",
+    "eventsLink": "EVENT AGENDA",
+    "admin": "ADMINISTER",
+    "home": "HOME",
+    "logout": "LOGOUT"
   },
 
   "home": {
     "titleEventsHub": "Extia Events Hub",
-    "descriptionEventsHub": "",
+    "descriptionEventsHub": "Discover a Sustainable Barcelona: Explore events and activities that promote ecology and sustainability in your city. Join the community and be part of the change.",
     "events": "Events",
     "moreEvents": "More Events",
     "collaborators": "Collaborators"
   },
 
   "events": {
-    "searchEvent": "Search Event",
+    "headerTitle": "Calendar events",
+    "headerDescription": "Develop your potential for a more sustainable world. Join our eco-friendly events in Barcelona and participate in the transformation. Learn new skills, connect with committed people, and find inspiration for conscious living. Start your sustainable journey today by participating in one of our events!",
+    "searchEvent": "Search event",
     "filterBy": "Filter by",
     "recently": "Recently",
-    "nextWeek": "Next Week",
+    "nextWeek": "Next week",
     "online": "Online",
-    "presential": "In Person"
+    "presential": "Presential"
   },
 
   "admin": {
-    "viewEstatistics": "View estatistics of event or",
-    "createNewEvent": "create new event",
-    "searchEvent": "Search Event",
+    "viewEstatistics": "View event statistics or",
+    "createNewEvent": "create a new event",
+    "searchEvent": "Search event",
     "eventsList": "Events list",
     "orderBy": "Order by",
-    "mostRecent":"Most recent",
-    "past":"Past",
-    "online":"Online event",
-    "presential":"Presential",
-    "viewEventsDetails":"View events details",
-    "participants":"Participants",
-    "viewEvent":"View event"
+    "mostRecent": "Most recent",
+    "past": "Past",
+    "online": "Online",
+    "presential": "Presential",
+    "viewEventsDetails": "View event details",
+    "participants": "Participants",
+    "viewEvent": "View event",
+    "editEvent": "Edit event",
+    "deleteEvent": "Delete event",
+    "confirmDelete": "You are about to delete an event",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "successDelete": "Successfully deleted",
+    "reset": "Reset"
   },
 
-  "singleEvent":{
-    "whereAndWhen":"Where and when",
-    "aboutTheEvent":"About the event",
-    "register":"Register",
-    "name":"Name",
-    "email":"Email",
-    "getMyTicket":"Get my ticket now"
-  }
+  "formEvent": {
+    "editingEvent": "Editing event",
+    "titleEvent": "Event title",
+    "shortDescription": "Short description",
+    "longDescription": "Long description",
+    "mode": "Mode",
+    "presential": "Presential",
+    "online": "Online",
+    "location": "Location",
+    "initDate": "Start date",
+    "endDate": "End date",
+    "startTime": "Start time",
+    "endTime": "End time",
+    "maxParticipants": "Maximum participants",
+    "image": "Image",
+    "createEvent": "Create new event",
+    "noFileSelected": "No file selected"
+  },
 
+  "singleEvent": {
+    "whereAndWhen": "Location and Date",
+    "aboutTheEvent": "About the Event",
+    "register": "Register",
+    "name": "Name",
+    "email": "Email",
+    "getMyTicket": "Get my ticket now",
+    "here": "here",
+    "successRegister": "Successfully registered"
+  }
 }

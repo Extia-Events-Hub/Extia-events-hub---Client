@@ -10,6 +10,7 @@ import SingleEvent from "../views/singleEvent/SingleEvent";
 import AdminView from "../views/admin/AdminView";
 import CreateEvent from "../views/admin/CreateEvent";
 import ScrollToTop from "../components/scrollTop/ScrollTop";
+import EditEvent from "../views/admin/EditEvent";
 
 export function Router() {
   const { token } = useContext(AuthContext);
@@ -36,8 +37,18 @@ export function Router() {
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<SingleEvent />} />
 
-          <Route path="/admin" element={<AdminView />} />
-          <Route path="/create-event" element={<CreateEvent />} />
+          <Route
+            path="/admin"
+            element={<ProtectedRoute element={AdminView} />}
+          />
+          <Route
+            path="/create-event"
+            element={<ProtectedRoute element={CreateEvent} />}
+          />
+          <Route
+            path="/edit-event/:id"
+            element={<ProtectedRoute element={EditEvent} />}
+          />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
