@@ -21,7 +21,7 @@ function SingleEvent() {
 
   const getEvent = async () => {
     const { data } = await eventService.show(id);
-    setEvent(createEventAdapter(data?.data,language));
+    setEvent(createEventAdapter(data?.data, language));
   };
 
   useEffect(() => {

@@ -12,9 +12,9 @@ function EventRegister({ className, id }) {
   const [isSuscribed, setIsSuscribed] = useState(false);
 
   const submitRegister = async (formData) => {
-    let dataSubmit = { ...formData, event_id: id };
+    const dataSubmit = { ...formData, event_id: id };
     try {
-      const {data} = eventService.registerEvent(dataSubmit);
+      const { data } = eventService.registerEvent(dataSubmit);
       swal({
         text: "Success",
         icon: "success",

@@ -9,16 +9,21 @@ function HomeHeader() {
   return (
     <div className="w-full h-[70vh] md:h-[60vh] md:mt-[10vh] relative  flex gap-8 md:flex-row md:justify-center items-center  ">
       <div className="w-full flex flex-col-reverse gap-24 md:flex-row md:mb- ">
-        <div
-          className="w-full md:w-1/2 flex flex-col md:justify-center gap-4"
-          
-        >
-          <h2 data-aos="fade-up "
-          data-aos-duration="2000"
-          data-aos-delay="200" className="title1 font-mulish">{t("home.titleEventsHub")}</h2>
-          <p data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="800" className="leading-7 md:text-lg">
+        <div className="w-full md:w-1/2 flex flex-col md:justify-center gap-4">
+          <h2
+            data-aos="fade-up "
+            data-aos-duration="2000"
+            data-aos-delay="200"
+            className="title1 font-mulish"
+          >
+            {t("home.titleEventsHub")}
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+            className="leading-7 md:text-lg"
+          >
             {t("home.descriptionEventsHub")}
           </p>
         </div>

@@ -25,7 +25,6 @@ export const eventBase = {
   endDate: "---",
   endTime: "---",
   user_id: 1,
-  max_participants:999,
-  image:
-    "---",
+  max_participants: 999,
+  image: "---",
 };
