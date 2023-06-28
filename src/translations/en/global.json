@@ -37,7 +37,8 @@
     "presential":"Presential",
     "viewEventsDetails":"View events details",
     "participants":"Participants",
-    "viewEvent":"View event"
+    "viewEvent":"View event",
+    "editEvent":"Edit event"
   },
 
   "singleEvent":{
