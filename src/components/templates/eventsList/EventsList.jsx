@@ -42,10 +42,10 @@ function EventsList({ className, eventsList, getEvents }) {
         },
       }).then((willDelete) => {
         if (willDelete) {
-          window.reload();
           swal(t("admin.successDelete"), {
             icon: "success",
           });
+          window.location.reload();
         }
       });
 

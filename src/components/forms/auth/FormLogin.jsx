@@ -22,6 +22,8 @@ function FormLogin({ className }) {
         icon: "success",
       });
       navigate("/home");
+      window.location.reload();
+
     } catch (error) {
       console.log(error);
       swal({
