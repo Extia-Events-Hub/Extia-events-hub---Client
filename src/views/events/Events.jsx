@@ -29,7 +29,7 @@ function Events() {
 
   useEffect(() => {
     getEvents();
-  }, []);
+  }, [language]);
 
   return (
     <>
