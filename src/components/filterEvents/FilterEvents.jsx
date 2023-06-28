@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HiOutlineChevronDown } from "react-icons/hi2";
 
@@ -45,15 +45,22 @@ function FilterEvents({
     ONLINE: "online",
     PRESENTIAL: "presential",
     RECENTS: "recents",
+    RESET: "reset",
   };
 
   const filterFunction = (optionFilter) => {
     switch (optionFilter) {
       case optionsFilterDic.ONLINE:
         filterModeIsPresential(false);
+        console.log("solo online");
         break;
       case optionsFilterDic.PRESENTIAL:
         filterModeIsPresential(true);
+        console.log("solo presencial");
+        break;
+      case optionsFilterDic.RESET:
+        setFilteredEventList(initialList);
+        console.log("solo presencial");
         break;
       default:
         console.log("no valid filter");
@@ -63,7 +70,8 @@ function FilterEvents({
 
   const filterModeIsPresential = (isPresential) => {
     const cloneEventList = initialList?.filter(
-      (event) => event.isPresential === isPresential
+      (event) =>
+        JSON.parse(event?.isPresential) == isPresential || JSON.parse(isPresential)
     );
     setFilteredEventList(cloneEventList);
   };
@@ -74,6 +82,10 @@ function FilterEvents({
       traducedText: t("events.presential"),
       filterBy: optionsFilterDic.PRESENTIAL,
     },
+    {
+      traducedText: t("admin.reset"),
+      filterBy: optionsFilterDic.RESET,
+    },
   ];
 
   return (
@@ -81,6 +93,7 @@ function FilterEvents({
       <input
         data-aos="fade-right"
         data-aos-duration="1300"
+        data-aos-delay="300"
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
@@ -90,6 +103,7 @@ function FilterEvents({
       <div
         data-aos="fade-left"
         data-aos-duration="1300"
+        data-aos-delay="300"
         className="w-full py-3 md:w-1/3 shadow-custom flex justify-center items-center rounded-full backdrop-filter relative backdrop-blur-md bg-white bg-opacity-60 hover:bg-white "
       >
         <span
