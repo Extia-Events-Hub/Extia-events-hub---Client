@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "../../ui/commons/Button";
+import { useForm } from "react-hook-form";
+import swal from "sweetalert";
+import { HiCheckCircle } from "react-icons/hi2";
 
-const EventRegisterFixed = () => {
+const EventRegisterFixed = ({ id }) => {
   const { t } = useTranslation("global");
+  const { register, handleSubmit } = useForm();
+  const [isSuscribed, setIsSuscribed] = useState(false);
+
+  const submitRegister = async (formData) => {
+    let dataSubmit = { ...formData, event_id: id };
+    try {
+      const {data} = await eventService.registerEvent(dataSubmit);
+      swal({
+        text: "Success",
+        icon: "success",
+      });
+      setIsSuscribed(true);
+    } catch (error) {
+      console.log(error);
+      swal({
+        title: "Error",
+        text: error?.message,
+        icon: "error",
+      });
+    }
+    console.log(data);
+  };
 
   return (
     <div className="w-full shadow-custom z-20  bg-white fixed px-4 flex flex-col gap-4 bottom-0 font-roboto md:hidden">
@@ -17,11 +42,23 @@ const EventRegisterFixed = () => {
             </span>
           </h2>
         </div>
-        <form className="collapse-content flex flex-col gap-4 bg-white ">
+        <form
+          onSubmit={handleSubmit(submitRegister)}
+          className="collapse-content flex flex-col gap-4 relative bg-white "
+        >
+          <span
+            className={`absolute shadow-none w-[calc(100%-2rem)] rounded-md h-[calc(100%-1rem)] flex justify-center flex-col items-center bg-white transition-all ${
+              isSuscribed ? "opacity-100" : "opacity-0 pointer-events-none"
+            } `}
+          >
+            <HiCheckCircle className="text-green-500 w-20 h-20" />
+            {t("singleEvent.successRegister")}
+          </span>
           <label className="bold flex flex-col">
             {t("singleEvent.name")}
             <input
               required
+              {...register("userName")}
               type="text"
               className="input input-bordered"
               placeholder={t("singleEvent.name")}
@@ -30,13 +67,14 @@ const EventRegisterFixed = () => {
           <label className="bold flex flex-col">
             {t("singleEvent.email")}
             <input
+              {...register("userEmail")}
               required
               type="text"
               className="input input-bordered"
               placeholder={t("singleEvent.email")}
             />
           </label>
-          <Button>{t("singleEvent.getMyTicket")}</Button>
+          <Button type={"submit"}>{t("singleEvent.getMyTicket")}</Button>
         </form>
       </div>
     </div>
