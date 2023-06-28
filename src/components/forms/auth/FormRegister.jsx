@@ -26,6 +26,8 @@ function FormRegister({ className }) {
         icon: "success",
       });
       navigate("/home");
+      window.location.reload();
+
     } catch (error) {
       const errorMessage =
         error.response.data.message === "The email has already been taken."
