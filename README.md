@@ -12,7 +12,7 @@
 - [❤️ Acknowledgements](#-Acknowledgements)
   
 ## 📄 Overview
-Project description in one paragraph.
+Discover a sustainable Barcelona: Explore events and activities that promote ecology and sustainability in your city. Join the community and be part of the change.
 
 ## 🔧 Installation
 1. Clone the repository:
@@ -36,6 +36,7 @@ $ npm run dev
 
 ## 🕹️ Demo
 You can access the live demo [here!](https://extia-events-hub-client-nine.vercel.app)
+---
 ![DEMO IMG](https://i.imgur.com/75RMfTO.png)
 ![DEMO IMG](https://i.imgur.com/zqouE3x.png)
 
