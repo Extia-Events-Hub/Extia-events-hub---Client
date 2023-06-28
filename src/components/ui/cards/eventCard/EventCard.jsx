@@ -7,13 +7,10 @@ import { Link } from "react-router-dom";
 export function EventCard({ event, className }) {
   const { t } = useTranslation("global");
 
-  const { lenguage } = useContext(AuthContext);
+  const { language } = useContext(AuthContext);
 
-  const lenguageLowerCase = lenguage.toLowerCase();
   const locationEvent =
-    event.mode[lenguageLowerCase].isPresential === true
-      ? event.mode[lenguageLowerCase].location
-      : t("eventCard.online");
+    event?.isPresential === true ? event?.location : t("eventCard.online");
   const date = event?.startDate;
 
   return (
@@ -26,12 +23,12 @@ export function EventCard({ event, className }) {
         <img
           src={event?.image}
           alt="cover event"
-          className="w-full aspect-video"
+          className="w-full aspect-video object-cover"
         />
       </div>
       <div className="p-4 font-roboto w-full gap-4 flex flex-col items-start">
         <h3 className="font-roboto font-bold text-lg">
-          {event?.title[lenguageLowerCase]}
+          {event?.title}
         </h3>
         <h2 className="text-primary">
           {t("eventCard.date")}:{event && date}

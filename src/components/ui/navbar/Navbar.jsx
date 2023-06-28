@@ -9,12 +9,15 @@ import swal from "sweetalert";
 import AuthContext from "../../../context/AuthContext";
 import SelectLanguage from "../selectLanguage/SelectLanguage";
 import logo from "../../../assets/images/logo_header.svg";
+import { useTranslation } from "react-i18next";
 
 function Navbar({ className }) {
+  const { t } = useTranslation("global");
   const navigate = useNavigate();
-  const { setUser, setToken } = useContext(AuthContext);
+  const { setUser, setToken, token } = useContext(AuthContext);
 
   const [openNav, setOpenNav] = useState(false);
+  console.log("token", token && "existe");
 
   const logout = () => {
     swal({
@@ -72,12 +75,14 @@ function Navbar({ className }) {
     <div className={"grid grid-cols-12 gap-8  " + " " + className}>
       <nav className=" col-span-10 my-4 px-8 shadow-custom rounded-full justify-between items-center backdrop-filter backdrop-blur-md bg-white bg-opacity-60 hover:bg-white transition-all hidden md:flex ">
         <Link to="/home">
-          <span className="hover:scale-105 active:scale-100 roboto  font-bold transition-all">
-            Extia events hub
-          </span>
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-8 h-8 hover:scale-110 transition-all"
+          />
         </Link>
-        <div className="flex-none gap-4 ">
-          <div className="dropdown dropdown-end">
+        <div className="flex items-center justify-center font-medium  gap-8 h-12">
+          {/* <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
               className="btn btn-ghost btn-circle avatar scale-110"
@@ -100,7 +105,43 @@ function Navbar({ className }) {
                 <p onClick={logout}>Cerrar sesión</p>
               </li>
             </ul>
-          </div>
+          </div> */}
+          <Link
+            className="hover:scale-105  hover:text-primary transition-all text-sm"
+            to="/home"
+          >
+            {t("navbar.home")}
+          </Link>
+          <Link
+            className="hover:scale-105 hover:text-primary transition-all text-sm"
+            to="/events"
+          >
+            {t("navbar.eventsLink")}
+          </Link>
+
+          {token && (
+            <Link
+              className="hover:scale-105 hover:text-primary transition-all text-sm"
+              to="/admin"
+            >
+              {t("navbar.admin")}
+            </Link>
+          )}
+          {token ? (
+            <Link
+              onClick={logout}
+              className="hover:scale-105 hover:text-primary transition-all text-sm"
+            >
+              {t("navbar.logout")}
+            </Link>
+          ) : (
+            <Link
+              className="hover:scale-105 hover:text-primary transition-all text-sm"
+              to="/login"
+            >
+              {t("navbar.login")}
+            </Link>
+          )}
         </div>
       </nav>
       <SelectLanguage className="col-span-2 my-4 hidden md:flex" />
@@ -130,14 +171,28 @@ function Navbar({ className }) {
       >
         <ul className="font-roboto font-bold  gap-4 flex flex-col title3 w-full px-[5%] pt-[15vh]">
           <li className="hover:scale-110 hover:translate-x-4 transition-all active:scale-100">
-            <a className="">Profile</a>
+            <Link to="/home">{t("navbar.home")}</Link>
           </li>
           <li className="hover:scale-110 hover:translate-x-4 transition-all active:scale-100">
-            <a>Settings</a>
+            <Link to="/events">{t("navbar.eventsLink")}</Link>
           </li>
-          <li className="hover:scale-110 hover:translate-x-4 transition-all active:scale-100">
-            <p onClick={logout}>Cerrar sesión</p>
-          </li>
+          {token ? (
+            <li
+              onClick={logout}
+              className="hover:scale-110 hover:translate-x-4 transition-all active:scale-100"
+            >
+              {t("navbar.logout")}
+            </li>
+          ) : (
+            <li className="hover:scale-110 hover:translate-x-4 transition-all active:scale-100">
+              <Link to="/login">{t("navbar.login")}</Link>
+            </li>
+          )}
+          {token && (
+            <li className="hover:scale-110 hover:translate-x-4 transition-all active:scale-100">
+              <Link to="/admin">{t("navbar.admin")}</Link>
+            </li>
+          )}
           <SelectLanguage className={"py-2 w-1/2 self-center my-8"} />
         </ul>
       </div>

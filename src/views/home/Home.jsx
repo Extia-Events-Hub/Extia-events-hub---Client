@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/ui/navbar/Navbar";
 import { useTranslation } from "react-i18next";
 import { EventCard } from "../../components/ui/cards/eventCard/EventCard";
-import eventsData from "../../utilities/eventsData.json";
 import Footer from "../../components/ui/footer/Footer";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi2";
 import HomeSection from "../../components/ui/section/homeSection/HomeSection";
 import HomeHeader from "../../components/ui/header/HomeHeader";
+import { eventService } from "../../services/events.service";
+import { createEventAdapter } from "../../adapters/event.adapter";
 
 function Home() {
   const { t } = useTranslation("global");
+  const [eventsData, setEventsData] = useState(null);
+
+  const getEvents = async () => {
+    const { data } = await eventService.index();
+    const eventsAdapted = data?.data?.map((event) => {
+      return createEventAdapter(event);
+    });
+    setEventsData(eventsAdapted?.slice(0,6));
+  };
+
+  useEffect(() => {
+    getEvents();
+  }, []);
+
+  const brandList = ["", "", "", "", ""];
 
   return (
     <>
@@ -24,9 +40,15 @@ function Home() {
           title={t("home.events")}
         >
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {eventsData?.map((event, index) => {
-              return <EventCard key={index} event={event} />;
-            })}
+            {eventsData ? (
+              eventsData?.map((event, index) => {
+                return <EventCard key={index} event={event} />;
+              })
+            ) : (
+              <div className="w-full col-span-full py-16 flex justify-center items-center">
+                <span className="loading text-primary loading-dots loading-md md:loading-lg"></span>
+              </div>
+            )}
           </div>
           <span className="w-full flex justify-center pt-16">
             <Link
@@ -43,7 +65,7 @@ function Home() {
           title={t("home.collaborators")}
         >
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-            {eventsData?.map((event, index) => {
+            {brandList?.map((event, index) => {
               return (
                 <div
                   key={index}

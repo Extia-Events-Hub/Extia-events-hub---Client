@@ -6,15 +6,15 @@ const AuthContext = createContext(undefined);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useLocalStorage("user", "");
   const [token, setToken] = useLocalStorage("token", "");
-  const [lenguage, setLenguage] = useLocalStorage("lenguage", "ES");
+  const [language, setLanguage] = useLocalStorage("lang", "es");
 
   const contextData = {
     user,
     setUser,
     token,
     setToken,
-    lenguage,
-    setLenguage,
+    language,
+    setLanguage,
   };
 
   return (

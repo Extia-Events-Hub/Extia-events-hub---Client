@@ -1,14 +1,11 @@
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import AuthContext from "../../../context/AuthContext";
 
 function EventPreview({ className, eventSelected }) {
   const { t } = useTranslation("global");
 
   const { lenguage } = useContext(AuthContext);
-
-  const lenguageLowerCase = lenguage.toLowerCase();
 
   const eventTraduced = {
     id: eventSelected?.id,
