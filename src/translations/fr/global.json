@@ -82,6 +82,7 @@
     "email": "Email",
     "getMyTicket": "Obtenir mon billet maintenant",
     "here": "ici",
+    "userRegisterError": "Cet e-mail est déjà enregistré pour cet événement",
     "successRegister": "Inscription réussie"
   }
 }
