@@ -13,7 +13,7 @@ function FilterEvents({
 
   const [openFilters, setOpenFilters] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterSelected, setFilterSelected] = useState(t("events.recently"));
+  const [filterSelected, setFilterSelected] = useState(t("admin.all"));
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value?.toLowerCase());
@@ -45,7 +45,7 @@ function FilterEvents({
     ONLINE: "online",
     PRESENTIAL: "presential",
     RECENTS: "recents",
-    RESET: "reset",
+    ALL: "all",
   };
 
   const filterFunction = (optionFilter) => {
@@ -58,7 +58,7 @@ function FilterEvents({
         filterModeIsPresential(true);
         console.log("solo presencial");
         break;
-      case optionsFilterDic.RESET:
+      case optionsFilterDic.ALL:
         setFilteredEventList(initialList);
         console.log("solo presencial");
         break;
@@ -84,8 +84,8 @@ function FilterEvents({
       filterBy: optionsFilterDic.PRESENTIAL,
     },
     {
-      traducedText: t("admin.reset"),
-      filterBy: optionsFilterDic.RESET,
+      traducedText: t("admin.all"),
+      filterBy: optionsFilterDic.ALL,
     },
   ];
 
