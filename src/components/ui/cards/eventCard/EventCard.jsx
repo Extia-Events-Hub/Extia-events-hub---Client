@@ -26,7 +26,7 @@ export function EventCard({ event, className }) {
       <div className="p-4 font-roboto w-full gap-4 flex flex-col items-start">
         <h3 className="font-roboto font-bold text-lg">{event?.title}</h3>
         <h2 className="text-primary">
-          {t("eventCard.date")}:{event && date}
+          {event && date} - {event && event.startTime}
         </h2>
         <h2 className=" text-neutral-400 ">{event && locationEvent}</h2>
         <Link className=" self-end" target="_blank" to={"/events/" + event?.id}>

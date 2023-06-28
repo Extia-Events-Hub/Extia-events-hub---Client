@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../../components/ui/navbar/Navbar";
 import { useTranslation } from "react-i18next";
 import { EventCard } from "../../components/ui/cards/eventCard/EventCard";
@@ -9,15 +9,17 @@ import HomeSection from "../../components/ui/section/homeSection/HomeSection";
 import HomeHeader from "../../components/ui/header/HomeHeader";
 import { eventService } from "../../services/events.service";
 import { createEventAdapter } from "../../adapters/event.adapter";
+import AuthContext from "../../context/AuthContext";
 
 function Home() {
   const { t } = useTranslation("global");
   const [eventsData, setEventsData] = useState(null);
+  const { language } = useContext(AuthContext);
 
   const getEvents = async () => {
     const { data } = await eventService.index();
-    const eventsAdapted = data?.data?.map((event) => {
-      return createEventAdapter(event);
+    const eventsAdapted = await data?.data?.map((event) => {
+      return createEventAdapter(event, language);
     });
     setEventsData(eventsAdapted?.slice(0, 6));
   };
