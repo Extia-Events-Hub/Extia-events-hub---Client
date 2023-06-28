@@ -28,7 +28,6 @@ const EventRegisterFixed = ({ id }) => {
         icon: "error",
       });
     }
-    console.log(data);
   };
 
   return (

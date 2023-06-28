@@ -13,7 +13,7 @@ export const eventService = {
     return axios.get(baseUrl + "/events/" + eventId);
   },
   registerEvent: (data) => {
-    return axios.get(baseUrl + "/participants/", data);
+    return axios.post(baseUrl + "/participants/", data);
   },
   update: (eventId, data) => {
     return axios.put(baseUrl + "/events/" + eventId, data);
