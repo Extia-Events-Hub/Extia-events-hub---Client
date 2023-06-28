@@ -30,7 +30,7 @@ export function EventCard({ event, className }) {
         </h2>
         <h2 className=" text-neutral-400 ">{event && locationEvent}</h2>
         <Link className=" self-end" target="_blank" to={"/events/" + event?.id}>
-          <Button>View Event</Button>
+          <Button>{t("admin.viewEvent")}</Button>
         </Link>
       </div>
     </article>
