@@ -71,7 +71,8 @@
     "maxParticipants": "Nombre maximum de participants",
     "image": "Image",
     "createEvent": "Créer un nouvel événement",
-    "noFileSelected": "Aucun fichier sélectionné"
+    "noFileSelected": "Aucun fichier sélectionné",
+    "all":"tous"
   },
 
   "singleEvent": {
