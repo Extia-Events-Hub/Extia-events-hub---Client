@@ -27,7 +27,6 @@ function EventRegister({ className, id }) {
         icon: "error",
       });
     }
-    console.log(data);
   };
 
   return (
