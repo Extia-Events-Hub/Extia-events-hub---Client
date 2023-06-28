@@ -6,8 +6,8 @@ export const eventService = {
   index: () => {
     return axios.get(baseUrl + "/events");
   },
-  create:(data) => {
-    return axios.post(baseUrl + "/events",data)
+  create: (data) => {
+    return axios.post(baseUrl + "/events", data);
   },
   show: (eventId) => {
     return axios.get(baseUrl + "/events/" + eventId);

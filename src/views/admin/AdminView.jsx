@@ -20,6 +20,7 @@ function AdminView() {
     });
     setEventsData(eventsAdapted);
   };
+  window.reload();
 
   useEffect(() => {
     getEvents();

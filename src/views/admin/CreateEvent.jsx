@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import Button from "../../components/ui/commons/Button";
 import Navbar from "../../components/ui/navbar/Navbar";
 import { eventService } from "../../services/events.service";
 import { useNavigate, useParams } from "react-router-dom";
-import { createEventAdapter } from "../../adapters/event.adapter";
 import AuthContext from "../../context/AuthContext";
 import { useForm } from "react-hook-form";
 import { HiOutlinePhoto } from "react-icons/hi2";
@@ -13,17 +12,16 @@ import swal from "sweetalert";
 import { useTranslation } from "react-i18next";
 
 function CreateEvent() {
-  const {t} = useTranslation("global")
-  const { id } = useParams();
+  const { t } = useTranslation("global");
   const { language } = useContext(AuthContext);
   const [previewImage, setPreviewImage] = useState(null);
   const [eventToEdit, setEventToEdit] = useState(null);
   const navigate = useNavigate();
 
-  const { register, handleSubmit} = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = async (dataForm) => {
-    let newEvent = eventBase;
+    const newEvent = eventBase;
     console.log(dataForm);
     newEvent.title[language] = dataForm.title;
     newEvent.longDescription[language] = dataForm.longDescription;
@@ -43,7 +41,7 @@ function CreateEvent() {
       });
       navigate("/admin");
     } catch (error) {
-      console.log(error)
+      console.log(error);
       swal({
         title: "Error",
         text: error?.message,
@@ -67,7 +65,9 @@ function CreateEvent() {
     <>
       <Navbar className="fixed w-full  md:px-[10%] z-30" />
       <div className="w-full px-[5%] md:px-[10%] py-[15vh] flex flex-col items-center relative min-h-screen gap-16">
-        <h3 className="title3">{t("formEvent.editingEvent")}: {eventToEdit?.title}</h3>
+        <h3 className="title3">
+          {t("admin.createNewEvent")}: {eventToEdit?.title}
+        </h3>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="w-full md:w-1/2 flex flex-col gap-4"
@@ -90,7 +90,7 @@ function CreateEvent() {
 
           <div className="grid md:grid-cols-2 gap-4">
             <label className="font-mulish text-lg my-2">
-            {t("formEvent.mode")}
+              {t("formEvent.mode")}
               <select
                 className="select select-bordere rounded-full shadow-custom w-full font-roboto font-normal "
                 {...register("mode")}
@@ -110,7 +110,7 @@ function CreateEvent() {
           <div className="flex flex-col w-full gap-4">
             <div className="grid md:grid-cols-2 gap-4">
               <label className="font-mulish text-lg my-2">
-              {t("formEvent.initDate")}
+                {t("formEvent.initDate")}
                 <input
                   max="2025-01-01"
                   type="date"
@@ -151,7 +151,9 @@ function CreateEvent() {
               </label>
             </div>
           </div>
-          <h3 className="text-lg font-mulish my-2">{t("formEvent.longDescription")}</h3>
+          <h3 className="text-lg font-mulish my-2">
+            {t("formEvent.longDescription")}
+          </h3>
           <textarea
             {...register("longDescription")}
             placeholder={t("formEvent.longDescription")}
@@ -165,10 +167,7 @@ function CreateEvent() {
             type={"number"}
           />
           <h3 className="text-lg font-mulish my-2">{t("formEvent.image")}</h3>
-          <div
-
-            className="aspect-video md:aspect-[2/1] w-full rounded-2xl bg-white shadow-custom overflow-hidden "
-          >
+          <div className="aspect-video md:aspect-[2/1] w-full rounded-2xl bg-white shadow-custom overflow-hidden ">
             {previewImage ? (
               <img
                 src={previewImage}

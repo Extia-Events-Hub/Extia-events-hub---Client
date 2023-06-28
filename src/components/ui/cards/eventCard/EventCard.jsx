@@ -1,13 +1,10 @@
-import React, { useContext } from "react";
-import AuthContext from "../../../../context/AuthContext";
+import React from "react";
 import Button from "../../commons/Button";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export function EventCard({ event, className }) {
   const { t } = useTranslation("global");
-
-  const { language } = useContext(AuthContext);
 
   const locationEvent =
     event?.isPresential === true ? event?.location : t("eventCard.online");
@@ -27,9 +24,7 @@ export function EventCard({ event, className }) {
         />
       </div>
       <div className="p-4 font-roboto w-full gap-4 flex flex-col items-start">
-        <h3 className="font-roboto font-bold text-lg">
-          {event?.title}
-        </h3>
+        <h3 className="font-roboto font-bold text-lg">{event?.title}</h3>
         <h2 className="text-primary">
           {t("eventCard.date")}:{event && date}
         </h2>

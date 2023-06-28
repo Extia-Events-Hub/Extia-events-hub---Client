@@ -42,12 +42,12 @@ function EventsList({ className, eventsList, getEvents }) {
         },
       }).then((willDelete) => {
         if (willDelete) {
+          window.reload();
           swal(t("admin.successDelete"), {
             icon: "success",
           });
         }
       });
-      
 
       getEvents();
     } catch (error) {}
@@ -84,7 +84,9 @@ function EventsList({ className, eventsList, getEvents }) {
                   {/* <span>{t("admin.participants")} </span> */}
                   <span className="divider horizontal divider-horizontal hidden md:flex"></span>
                   <Link to={`/edit-event/${event?.id}`}>
-                    <Button className={"w-full md:w-auto"}>{t("admin.editEvent")}</Button>
+                    <Button className={"w-full md:w-auto"}>
+                      {t("admin.editEvent")}
+                    </Button>
                   </Link>
                   <span className="divider horizontal divider-horizontal hidden md:flex"></span>
                   <Button onClick={() => deleteEvent(event?.id)}>

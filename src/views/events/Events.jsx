@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../../components/ui/navbar/Navbar";
 import Footer from "../../components/ui/footer/Footer";
-import eventsList from "../../utilities/eventsData.json";
 import { EventCard } from "../../components/ui/cards/eventCard/EventCard";
 import { useTranslation } from "react-i18next";
 import FilterEvents from "../../components/filterEvents/FilterEvents";
@@ -40,7 +39,6 @@ function Events() {
         <div
           data-aos="fade-up"
           data-aos-duration="2000"
-          
           className="w-full flex flex-col justify-center items-center mt-[15vh] min-h-[40vh] md:min-h-[50vh] gap-4"
         >
           <span className=" font-mulish w-[90%] text-6xl -mt-[2rem] md:text-8xl -translate-y-20  opacity-5 absolute text-center overflow-hidden">
@@ -65,7 +63,7 @@ function Events() {
               })}
           </div>
         </div>
-        <ScrollToTopButton/>
+        <ScrollToTopButton />
       </div>
       <Footer className="mt-24" />
     </>

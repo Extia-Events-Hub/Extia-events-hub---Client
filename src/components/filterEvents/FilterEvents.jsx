@@ -71,7 +71,8 @@ function FilterEvents({
   const filterModeIsPresential = (isPresential) => {
     const cloneEventList = initialList?.filter(
       (event) =>
-        JSON.parse(event?.isPresential) == isPresential || JSON.parse(isPresential)
+        JSON.parse(event?.isPresential) == isPresential ||
+        JSON.parse(isPresential)
     );
     setFilteredEventList(cloneEventList);
   };

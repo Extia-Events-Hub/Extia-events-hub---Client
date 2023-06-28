@@ -17,7 +17,7 @@ const InputForm = ({
         <span className="label-text  select-text">{label}</span>
       </label>
       <input
-      required
+        required
         minLength={minLength}
         maxLength={maxLength}
         {...register(name)}

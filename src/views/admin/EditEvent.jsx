@@ -23,7 +23,7 @@ function EditEvent() {
   const getEvent = async () => {
     const { data } = await eventService.show(id);
     setEventToEdit(createEventAdapter(data?.data, language));
-    let initialEvent = createEventAdapter(data?.data, language);
+    const initialEvent = createEventAdapter(data?.data, language);
     setValue("max_participants", initialEvent.max_participants);
     setValue("startTime", initialEvent.startTime);
     setValue("endTime", initialEvent.endTime);
@@ -41,7 +41,7 @@ function EditEvent() {
   }, []);
 
   const onSubmit = async (dataForm) => {
-    let newEvent = eventBase;
+    const newEvent = eventBase;
     console.log(dataForm);
     newEvent.title[language] = dataForm.title;
     newEvent.longDescription[language] = dataForm.longDescription;
@@ -54,14 +54,14 @@ function EditEvent() {
     newEvent.endTime = dataForm.endTime;
     newEvent.image = dataForm.image[0];
     try {
-      const { data } = await eventService.update(eventToEdit?.id,newEvent);
+      const { data } = await eventService.update(eventToEdit?.id, newEvent);
       swal({
         text: "Evento editado con éxito",
         icon: "success",
       });
       navigate("/admin");
     } catch (error) {
-        console.log(error)
+      console.log(error);
       swal({
         title: "Error",
         text: error?.message,
