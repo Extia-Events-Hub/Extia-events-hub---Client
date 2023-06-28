@@ -14,18 +14,24 @@ function EventRegister({ className, id }) {
   const submitRegister = async (formData) => {
     const dataSubmit = { ...formData, event_id: id };
     try {
-      const { data } = eventService.registerEvent(dataSubmit);
+      const { data } = await eventService.registerEvent(dataSubmit);
       swal({
         text: "Success",
         icon: "success",
       });
       setIsSuscribed(true);
     } catch (error) {
-      swal({
-        title: "Error",
-        text: error?.message,
-        icon: "error",
-      });
+      error?.response?.status === 400
+        ? swal({
+            title: "Error",
+            text: t("singleEvent.userRegisterError"),
+            icon: "error",
+          })
+        : swal({
+            title: "Error",
+            text: error?.message,
+            icon: "error",
+          });
     }
   };
 
@@ -43,7 +49,7 @@ function EventRegister({ className, id }) {
         } `}
       >
         <HiCheckCircle className="text-green-500 w-20 h-20" />
-        {t("singleEvent.succesRegister")}
+        {t("singleEvent.successRegister")}
       </span>
       <h2 className="title3 font-semibold font-mulish">
         {t("singleEvent.register")}
