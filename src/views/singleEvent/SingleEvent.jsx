@@ -91,7 +91,7 @@ function SingleEvent() {
 
             <h2 className="title2">{t("singleEvent.aboutTheEvent")}</h2>
             <div className="flex flex-col gap-4 font-roboto">
-              {event?.title ?? (
+              {event?.longDescription ?? (
                 <span className="loading loading-dots loading-md md:loading-lg"></span>
               )}
             </div>
