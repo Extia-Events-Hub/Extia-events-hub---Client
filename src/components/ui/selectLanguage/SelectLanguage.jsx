@@ -1,12 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AuthContext from "../../../context/AuthContext";
 import { useTranslation } from "react-i18next";
 import { HiOutlineChevronDown } from "react-icons/hi2";
+import LoaderLang from "../loaders/LoaderLang";
 
 function SelectLanguage({ className }) {
   const [openLanguages, setOpenLanguages] = useState(false);
   const { language, setLanguage } = useContext(AuthContext);
   const [t, i18] = useTranslation("global");
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const changeLeng = () => {
+    setIsLoading(true),
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+  };
 
   return (
     <div
@@ -15,6 +25,7 @@ function SelectLanguage({ className }) {
         className
       }
     >
+      {<LoaderLang isLoad={isLoading} />}
       <span
         className="font-bold w-full h-full flex justify-center items-center cursor-pointer select-none gap-4 hover:text-primary transition-all "
         onClick={() => setOpenLanguages(!openLanguages)}
@@ -41,6 +52,7 @@ function SelectLanguage({ className }) {
             setLanguage("es");
             setOpenLanguages(false);
             i18.changeLanguage("es");
+            changeLeng();
           }}
         >
           ES
@@ -51,6 +63,7 @@ function SelectLanguage({ className }) {
             setLanguage("en");
             setOpenLanguages(false);
             i18.changeLanguage("en");
+            changeLeng();
           }}
         >
           EN
@@ -61,6 +74,7 @@ function SelectLanguage({ className }) {
             setLanguage("fr");
             setOpenLanguages(false);
             i18.changeLanguage("fr");
+            changeLeng();
           }}
         >
           FR

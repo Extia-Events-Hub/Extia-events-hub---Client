@@ -26,7 +26,7 @@ function SingleEvent() {
 
   useEffect(() => {
     getEvent();
-  }, []);
+  }, [language]);
 
   return (
     <>
