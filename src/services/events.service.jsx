@@ -12,6 +12,9 @@ export const eventService = {
   show: (eventId) => {
     return axios.get(baseUrl + "/events/" + eventId);
   },
+  registerEvent: (data) => {
+    return axios.get(baseUrl + "/participants/", data);
+  },
   update: (eventId, data) => {
     return axios.put(baseUrl + "/events/" + eventId, data);
   },
