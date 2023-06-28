@@ -52,7 +52,8 @@
     "cancel": "Cancel",
     "confirm": "Confirm",
     "successDelete": "Successfully deleted",
-    "reset": "Reset"
+    "reset": "Reset",
+    "all":"All"
   },
 
   "formEvent": {
